@@ -10032,3 +10032,134 @@ h6,
     font-size: 1.5rem;
   }
 }
+
+
+/* General Styling */
+
+
+/* Facilities Section */
+.facilities-section {
+  padding: 60px 15px;
+  background-color: #f9f9f9;
+}
+
+.facilities-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.facilities-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.facilities-header h1 {
+  margin-bottom: 15px;
+}
+
+.facilities-header p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 2.0;
+}
+
+.facilities-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Facility Item */
+.facility-item {
+  flex: 1 1 calc(25% - 30px);
+  max-width: calc(25% - 30px);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.facility-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Facility Icon */
+.facility-icon {
+  border-radius: 50%;
+  padding: 30px;
+  margin: 0 auto;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Facility Icon Colors */
+.facility-icon.school-bus {
+  background-color: #e6f7ff; /* Light blue for Virtual Classrooms */
+}
+
+.facility-icon.school-bus i {
+  color: #007bff; /* Blue icon */
+}
+
+.facility-icon.playground {
+  background-color: #fff5e6; /* Light orange for E-Library */
+}
+
+.facility-icon.playground i {
+  color: #ff851b; /* Orange icon */
+}
+
+.facility-icon.healthy-canteen {
+  background-color: #e6ffee; /* Light green for Personalized Learning */
+}
+
+.facility-icon.healthy-canteen i {
+  color: #28a745; /* Green icon */
+}
+
+.facility-icon.positive-learning {
+  background-color: #f9e6ff; /* Light purple for 24/7 Support */
+}
+
+.facility-icon.positive-learning i {
+  color: #6f42c1; /* Purple icon */
+}
+
+
+/* Facility Text */
+.facility-text {
+  margin-top: 20px;
+}
+
+.facility-text h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.facility-text p {
+  font-size: 0.95rem;
+  color: #777;
+  line-height: 1.5;
+}
+
+/* Facility Text Colors */
+.facility-text.school-bus h3 {
+  color: #ff6f6f;
+}
+
+.facility-text.playground h3 {
+  color: #28a745;
+}
+
+.facility-text.healthy-canteen h3 {
+  color: #ffc107;
+}
+
+.facility-text.positive-learning h3 {
+  color: #17a2b8;
+}
