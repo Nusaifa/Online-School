@@ -1,12 +1,11 @@
 const mysql = require("mysql2");
 
-
 // Create a connection pool
 const db = mysql.createPool({
     host: "localhost",       // MySQL host (change if necessary)
     user: "root",            // MySQL username (default is 'root')
-    password: "1234",            // MySQL password 
-    database: "online_school" // Database name 
+    password: "1234",        // MySQL password 
+    database: "saha_learning_hub" // New database name
 });
 
 // Test connection

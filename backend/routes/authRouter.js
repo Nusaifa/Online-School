@@ -1,304 +1,60 @@
-// const express = require("express");
-// const bcrypt = require("bcrypt");
-// const User = require("../models/User");
-
-// const router = express.Router();
-
-// // Register a new user
-// router.post("/register", async (req, res) => {
-//     const { name, email, password } = req.body;
-
-//     if (!name || !email || !password) {
-//         return res.status(400).send("All fields are required.");
-//     }
-
-//     try {
-//         const hashedPassword = await bcrypt.hash(password, 10);
-//         const user = new User({ name, email, password: hashedPassword });
-//         await user.save();
-//         res.send(`
-//             <script>
-//                 alert('Registration successful! Please login.');
-//                 window.location.href = '/login.html';
-//             </script>
-//           `);
-//     } catch (error) {
-//         console.error("Error registering user:", error);
-//         res.status(500).send("Error registering user. Email may already be in use.");
-//     }
-// });
-
-// // Login a user
-// router.post("/login", async (req, res) => {
-//     const { email, password } = req.body;
-
-//     try {
-//         // Find user by email
-//         const user = await User.findOne({ email });
-//         if (!user) {
-//             return res.send(`
-//                 <script>
-//                     alert('Invalid email or password. Please try again.');
-//                     window.location.href = '/login.html';
-//                 </script>
-//             `);
-//         }
-
-//         // Compare passwords
-//         const isValidPassword = await bcrypt.compare(password, user.password);
-//         if (!isValidPassword) {
-//             return res.send(`
-//                 <script>
-//                     alert('Invalid email or password. Please try again.');
-//                     window.location.href = '/login.html';
-//                 </script>
-//             `);
-//         }
-
-//         // Login successful
-//         res.send(`
-//             <script>
-//                 alert('Login successful! Welcome, ${user.name}.');
-//                 window.location.href = '/';
-//             </script>
-//         `);
-//     } catch (error) {
-//         console.error("Error logging in user:", error);
-//         res.status(500).send(`
-//             <script>
-//                 alert('An error occurred. Please try again later.');
-//                 window.location.href = '/login.html';
-//             </script>
-//         `);
-//     }
-// });
-
-// module.exports = router;
-
-
-// const express = require("express");
-// const bcrypt = require("bcrypt");
-// const mysql = require("mysql");
-// const db = require("../db");
-
-// const router = express.Router();
-
-// // Register a new user
-// router.post("/register", async (req, res) => {
-//     const { name, email, password } = req.body;
-
-//     if (!name || !email || !password) {
-//         return res.status(400).send("All fields are required.");
-//     }
-
-//     try {
-//         const hashedPassword = await bcrypt.hash(password, 10);
-
-//         const query = "INSERT INTO users (name, email, password) VALUES (?, ?, ?)";
-//         db.query(query, [name, email, hashedPassword], (err, result) => {
-//             if (err) {
-//                 console.error("Error registering user:", err);
-//                 return res.status(500).send("Error registering user. Email may already be in use.");
-//             }
-
-//             res.send(`
-//                 <script>
-//                     alert('Registration successful! Please login.');
-//                     window.location.href = '/login.html';
-//                 </script>
-//             `);
-//         });
-//     } catch (error) {
-//         console.error("Error registering user:", error);
-//         res.status(500).send("An error occurred. Please try again later.");
-//     }
-// });
-
-// // Login a user
-// router.post("/login", (req, res) => {
-//     const { email, password } = req.body;
-
-//     if (!email || !password) {
-//         return res.status(400).send("All fields are required.");
-//     }
-
-//     const query = "SELECT * FROM users WHERE email = ?";
-//     db.query(query, [email], async (err, results) => {
-//         if (err) {
-//             console.error("Error finding user:", err);
-//             return res.status(500).send("An error occurred. Please try again later.");
-//         }
-
-//         if (results.length === 0) {
-//             return res.send(`
-//                 <script>
-//                     alert('Invalid email or password. Please try again.');
-//                     window.location.href = '/login.html';
-//                 </script>
-//             `);
-//         }
-
-//         const user = results[0];
-//         const isValidPassword = await bcrypt.compare(password, user.password);
-//         if (!isValidPassword) {
-//             return res.send(`
-//                 <script>
-//                     alert('Invalid email or password. Please try again.');
-//                     window.location.href = '/login.html';
-//                 </script>
-//             `);
-//         }
-
-//         res.send(`
-//             <script>
-//                 alert('Login successful! Welcome, ${user.name}.');
-//                 window.location.href = '/';
-//             </script>
-//         `);
-//     });
-// });
-
-// module.exports = router;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const express = require("express");
-// const bcrypt = require("bcrypt");
-// const mysql = require("mysql");
-// const db = require("../db");
-
-// const router = express.Router();
-
-// // Register a new user
-// router.post("/register", async (req, res) => {
-//     const { name, email, password } = req.body;
-
-//     if (!name || !email || !password) {
-//         return res.status(400).send("All fields are required.");
-//     }
-
-//     try {
-//         const hashedPassword = await bcrypt.hash(password, 10);
-        
-//         // Query to insert new user into MySQL database
-//         const query = "INSERT INTO users (name, email, password) VALUES (?, ?, ?)";
-//         db.query(query, [name, email, hashedPassword], (err, result) => {
-//             if (err) {
-//                 console.error("Error inserting user:", err);
-//                 return res.status(500).send("Error registering user. Email may already be in use.");
-//             }
-//             res.send(`
-//                 <script>
-//                     alert('Registration successful! Please login.');
-//                     window.location.href = '/login.html';
-//                 </script>
-//             `);
-//         });
-//     } catch (error) {
-//         console.error("Error registering user:", error);
-//         res.status(500).send("Error registering user.");
-//     }
-// });
-
-// // Login a user
-// router.post("/login", async (req, res) => {
-//     const { email, password } = req.body;
-
-//     try {
-//         // Query to find user by email
-//         const query = "SELECT * FROM users WHERE email = ?";
-//         db.query(query, [email], async (err, result) => {
-//             if (err) {
-//                 console.error("Error finding user:", err);
-//                 return res.status(500).send("Error logging in.");
-//             }
-//             if (result.length === 0) {
-//                 return res.send(`
-//                     <script>
-//                         alert('Invalid email or password.');
-//                         window.location.href = '/login.html';
-//                     </script>
-//                 `);
-//             }
-
-//             const user = result[0]; // Assuming single result returned
-
-//             // Compare passwords
-//             const isValidPassword = await bcrypt.compare(password, user.password);
-//             if (!isValidPassword) {
-//                 return res.send(`
-//                     <script>
-//                         alert('Invalid email or password.');
-//                         window.location.href = '/login.html';
-//                     </script>
-//                 `);
-//             }
-
-//             // Login successful
-//             res.send(`
-//                 <script>
-//                     alert('Login successful! Welcome, ${user.name}.');
-//                     window.location.href = '/';
-//                 </script>
-//             `);
-//         });
-//     } catch (error) {
-//         console.error("Error logging in user:", error);
-//         res.status(500).send("Error logging in user.");
-//     }
-// });
-
-// module.exports = router;
-
-
 const express = require("express");
 const bcrypt = require("bcrypt");
 const mysql = require("mysql");
+const multer = require("multer"); 
+const path = require("path");
 const db = require("../db");
 
 const router = express.Router();
 
-// Register a new user
-router.post("/register", async (req, res) => {
-    const { name, email, password } = req.body;
+// Set up storage engine for multer
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        // Save files to the 'uploads' folder
+        cb(null, 'uploads/');
+    },
+    filename: function (req, file, cb) {
+        // Use original file name and add timestamp to avoid file name conflicts
+        const ext = path.extname(file.originalname);
+        cb(null, Date.now() + ext);
+    }
+});
 
-    if (!name || !email || !password) {
-        return res.status(400).send("All fields are required.");
+const upload = multer({ storage: storage }); // Initialize multer with storage settings
+
+// Register a new user (with file upload handling)
+router.post("/register", upload.single("profilePicture"), async (req, res) => {
+    const { fullName, initials, gender, guardianName, email, mobileNumber, address, district, section, grade, password } = req.body;
+
+    // Check if all required fields are present
+    if (!fullName || !email || !password) {
+        return res.status(400).json({ message: "All fields are required." });
     }
 
     try {
+        // Hash the password
         const hashedPassword = await bcrypt.hash(password, 10);
+
+        // Handle profile picture upload
+        let profilePicture = null;
+        if (req.file) {
+            // Save the path of the uploaded file in the database
+            profilePicture = req.file.path; // e.g., 'uploads/123456.jpg'
+        }
+
+        // Insert user data into the database
+        const query = "INSERT INTO users (fullName, initials, gender, guardianName, email, mobileNumber, address, district, section, grade, password, profilePicture) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         
-        // Query to insert new user into MySQL database
-        const query = "INSERT INTO users (name, email, password) VALUES (?, ?, ?)";
-        db.query(query, [name, email, hashedPassword], (err, result) => {
+        db.query(query, [fullName, initials, gender, guardianName, email, mobileNumber, address, district, section, grade, hashedPassword, profilePicture], (err, result) => {
             if (err) {
                 console.error("Error inserting user:", err);
-                return res.status(500).send("Error registering user. Email may already be in use.");
+                return res.status(500).json({ message: "Error registering user. Email may already be in use." });
             }
-            res.send(`
-                <script>
-                    alert('Registration successful! Please login.');
-                    window.location.href = '/login.html';
-                </script>
-            `);
+            res.status(200).json({ message: "Registration successful! Please log in." });
         });
     } catch (error) {
         console.error("Error registering user:", error);
-        res.status(500).send("Error registering user.");
+        res.status(500).json({ message: "Error registering user." });
     }
 });
 
@@ -312,15 +68,10 @@ router.post("/login", async (req, res) => {
         db.query(query, [email], async (err, result) => {
             if (err) {
                 console.error("Error finding user:", err);
-                return res.status(500).send("Error logging in.");
+                return res.status(500).json({ message: "Error logging in." });
             }
             if (result.length === 0) {
-                return res.send(`
-                    <script>
-                        alert('Invalid email or password.');
-                        window.location.href = '/login.html';
-                    </script>
-                `);
+                return res.status(400).json({ message: "Invalid email or password." });
             }
 
             const user = result[0]; // Assuming single result returned
@@ -328,26 +79,17 @@ router.post("/login", async (req, res) => {
             // Compare passwords
             const isValidPassword = await bcrypt.compare(password, user.password);
             if (!isValidPassword) {
-                return res.send(`
-                    <script>
-                        alert('Invalid email or password.');
-                        window.location.href = '/login.html';
-                    </script>
-                `);
+                return res.status(400).json({ message: "Invalid email or password." });
             }
 
             // Login successful
-            res.send(`
-                <script>
-                    alert('Login successful! Welcome, ${user.name}.');
-                    window.location.href = '/';
-                </script>
-            `);
+            res.status(200).json({ message: `Login successful! Welcome ${user.fullName}.` });
         });
     } catch (error) {
         console.error("Error logging in user:", error);
-        res.status(500).send("Error logging in user.");
+        res.status(500).json({ message: "Error logging in user." });
     }
 });
 
 module.exports = router;
+
