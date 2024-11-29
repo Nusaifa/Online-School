@@ -3,28 +3,68 @@
 
 <head>
     <meta charset="utf-8">
-    <title> Teachers - SAHA LEARNING HUB</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <link rel="icon" href="https://i.ibb.co/qrxhwTW/logo.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet our expert educators at SAHA Learning Hub. Explore teacher profiles, qualifications, and their commitment to delivering quality online education.">
+    <meta name="keywords" content="teachers, educators, online school teachers, expert faculty, online learning, SAHA Learning Hub">
+    <meta name="author" content="SAHA Learning Hub Team">
+    <meta name="robots" content="index, follow">
+
+    <title>Teachers - SAHA Learning Hub</title>
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Meet Our Teachers - SAHA Learning Hub">
+    <meta property="og:description" content="Learn from the best! Discover the profiles of our qualified teachers who bring expertise and passion to online learning.">
+    <meta property="og:url" content="http://localhost:3000/teachers">
+    <meta property="og:image" content="https://i.ibb.co/qrxhwTW/logo.png">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Meet Our Teachers - SAHA Learning Hub">
+    <meta name="twitter:description" content="Explore the expert educators at SAHA Learning Hub who are dedicated to providing exceptional online education.">
+    <meta name="twitter:image" content="https://i.ibb.co/qrxhwTW/logo.png">
+
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="http://localhost:3000/teachers">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="https://i.ibb.co/qrxhwTW/logo.png" type="image/png">
 
-    <!-- Google Web Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-</head>
 
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "SAHA Learning Hub",
+        "url": "http://localhost:3000/teachers",
+        "description": "SAHA Learning Hub is committed to offering high-quality online education through a team of dedicated and experienced teachers.",
+        "logo": "https://i.ibb.co/qrxhwTW/logo.png",
+        "sameAs": [
+            "https://www.facebook.com/sahalearninghub",
+            "https://twitter.com/sahalearninghub",
+            "https://www.instagram.com/sahalearninghub"
+        ],
+        "hasCourse": {
+            "@type": "Course",
+            "name": "Online Learning Courses",
+            "description": "Interactive online courses led by expert teachers in various subjects for learners of all levels."
+        }
+    }
+    </script>
+</head>
 <body>
 
 <!-- Topbar start -->
@@ -70,7 +110,7 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light px-0 py-3">
                 <!-- Logo Section (left side) -->
                 <a href="#" class="navbar-brand d-block d-lg-none">
-                    <h1 class="m-0"><span class="text-primary">E</span>COURSES</h1>
+                    <h1 class="m-0" style="color: #800000;">SAHA Learning Hub</h1>
                 </a>
 
                 <!-- Toggler button for mobile view -->
@@ -121,137 +161,577 @@
 </div>
 <!-- Navbar End -->
 
-    
+<!-- Carousel Start -->
+<div class="container-fluid p-0 pb-5 mb-5">
+    <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="min-height: 300px;">
+                <img class="position-relative w-100" src="img/carousel-1.jpg"
+                    style="min-height: 300px; object-fit: cover;">
+                <div class="carousel-caption d-flex align-items-center justify-content-center">
+                    <div class="p-5" style="width: 100%; max-width: 900px;">
+                        <h1 class="display-3 text-white mb-md-4" style="text-align: center;">Best Education From
+                            Your Home</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Carousel End -->
+ 
+<!-- Team start-->
+<section class="our-team-section py-5" style="background: linear-gradient(135deg, #e0f7fa, #f9fbe7);">
+    <div class="container">
+        <!-- Header -->
+        <div class="text-center mb-5">
+            <h5 class="text-uppercase text-primary mb-3" style="letter-spacing: 5px;">Our Educators</h5>
+            <h1 class="text-dark">Get to Know Our Primary Section Teachers</h1>
+            <p class="text-muted">
+                Inspiring education through dedication, innovation and passion.
+            </p>
+        </div>
 
+<!-- Teacher Cards -->
+<div class="row g-4">
+    <!-- Row 1 -->
+    <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
+        <div class="teacher-card shadow-sm w-100">
+            <div class="teacher-photo-wrapper">
+                <img src="img/teacher_2.png" alt="MM. Mumthaj" class="teacher-photo img-fluid rounded-circle">
+            </div>
+            <div class="teacher-info text-center mt-4">
+                <h3 class="teacher-name text-primary">M.M. Mumthaj</h3>
+                <p class="teacher-role">Mathematics</p>
+                <p class="teacher-description">
+                    Creating a love for numbers and problem solving among young learners.
+                </p>
+            </div>
+        </div>
+    </div>
 
+    <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
+        <div class="teacher-card shadow-sm w-100">
+            <div class="teacher-photo-wrapper">
+                <img src="img/teacher_2.png" alt="MIF. Shabna" class="teacher-photo img-fluid rounded-circle">
+            </div>
+            <div class="teacher-info text-center mt-4">
+                <h3 class="teacher-name text-primary">M.I.F. Shabna</h3>
+                <p class="teacher-role">Mathematics</p>
+                <p class="teacher-description">
+                    Engaging students with creative and interactive math lessons.
+                </p>
+            </div>
+        </div>
+    </div>
 
+    <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
+        <div class="teacher-card shadow-sm w-100">
+            <div class="teacher-photo-wrapper">
+                <img src="img/teacher_2.png" alt="Sajee Rose" class="teacher-photo img-fluid rounded-circle">
+            </div>
+            <div class="teacher-info text-center mt-4">
+                <h3 class="teacher-name text-primary">Sajee Rose</h3>
+                <p class="teacher-role">Tamil Language</p>
+                <p class="teacher-description">
+                    Guiding students to master Tamil with enthusiasm and creativity.
+                </p>
+            </div>
+        </div>
+    </div>
 
+    <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
+        <div class="teacher-card shadow-sm w-100">
+            <div class="teacher-photo-wrapper">
+                <img src="img/teacher_2.png" alt="MIF. Hafsha" class="teacher-photo img-fluid rounded-circle">
+            </div>
+            <div class="teacher-info text-center mt-4">
+                <h3 class="teacher-name text-primary">M.I.F. Hafsha</h3>
+                <p class="teacher-role">Tamil Language</p>
+                <p class="teacher-description">
+                    Developing strong language skills and cultural appreciation in Tamil.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 
+<!-- Space after 1st row -->
+<div class="py-3"></div>
 
+<div class="row g-4">
+    <!-- Row 2 -->
+    <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
+        <div class="teacher-card shadow-sm w-100">
+            <div class="teacher-photo-wrapper">
+                <img src="img/teacher_2.png" alt="MN. Naslun Fathima" class="teacher-photo img-fluid rounded-circle">
+            </div>
+            <div class="teacher-info text-center mt-4">
+                <h3 class="teacher-name text-primary">M.N. Naslun Fathima</h3>
+                <p class="teacher-role">English Language</p>
+                <p class="teacher-description">
+                    Encouraging confidence in communication with comprehensive English lessons.
+                </p>
+            </div>
+        </div>
+    </div>
 
+    <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
+        <div class="teacher-card shadow-sm w-100">
+            <div class="teacher-photo-wrapper">
+                <img src="img/teacher_2.png" alt="MRC. Rizma" class="teacher-photo img-fluid rounded-circle">
+            </div>
+            <div class="teacher-info text-center mt-4">
+                <h3 class="teacher-name text-primary">M.R.C. Rizma</h3>
+                <p class="teacher-role">English Language</p>
+                <p class="teacher-description">
+                    Developing fluency and comprehension skills in English with engaging content.
+                </p>
+            </div>
+        </div>
+    </div>
 
+    <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
+        <div class="teacher-card shadow-sm w-100">
+            <div class="teacher-photo-wrapper">
+                <img src="img/teacher_2.png" alt="M.H.F. Rinosa" class="teacher-photo img-fluid rounded-circle">
+            </div>
+            <div class="teacher-info text-center mt-4">
+                <h3 class="teacher-name text-primary">M.H.F. Rinosa</h3>
+                <p class="teacher-role">Environmental Studies</p>
+                <p class="teacher-description">
+                    Inspiring awareness and love for the environment in young learners.
+                </p>
+            </div>
+        </div>
+    </div>
 
+    <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
+        <div class="teacher-card shadow-sm w-100">
+            <div class="teacher-photo-wrapper">
+                <img src="img/teacher_2.png" alt="M. Rushana" class="teacher-photo img-fluid rounded-circle">
+            </div>
+            <div class="teacher-info text-center mt-4">
+                <h3 class="teacher-name text-primary">M. Rushana</h3>
+                <p class="teacher-role">Environmental Studies</p>
+                <p class="teacher-description">
+                    Encouraging sustainable living and environmental responsibility.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 
+<!-- Space after 2nd row -->
+<div class="py-3"></div>
 
+<div class="row g-4">
+    <!-- Row 3 -->
+    <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
+        <div class="teacher-card shadow-sm w-100">
+            <div class="teacher-photo-wrapper">
+                <img src="img/teacher_2.png" alt="AS. Fathima" class="teacher-photo img-fluid rounded-circle">
+            </div>
+            <div class="teacher-info text-center mt-4">
+                <h3 class="teacher-name text-primary">A.S. Fathima</h3>
+                <p class="teacher-role">Second Language Sinhala</p>
+                <p class="teacher-description">
+                    Helping students master Sinhala as a second language with ease.
+                </p>
+            </div>
+        </div>
+    </div>
 
+    <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
+        <div class="teacher-card shadow-sm w-100">
+            <div class="teacher-photo-wrapper">
+                <img src="img/teacher_2.png" alt="SFF. Sumaiya" class="teacher-photo img-fluid rounded-circle">
+            </div>
+            <div class="teacher-info text-center mt-4">
+                <h3 class="teacher-name text-primary">S.F.F. Sumaiya</h3>
+                <p class="teacher-role">Islam</p>
+                <p class="teacher-description">
+                    Teaching values and principles of Islam to guide students holistically.
+                </p>
+            </div>
+        </div>
+    </div>
 
+    <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
+        <div class="teacher-card shadow-sm w-100">
+            <div class="teacher-photo-wrapper">
+                <img src="img/teacher_2.png" alt="MSF. Safiya" class="teacher-photo img-fluid rounded-circle">
+            </div>
+            <div class="teacher-info text-center mt-4">
+                <h3 class="teacher-name text-primary">M.S.F. Safiya</h3>
+                <p class="teacher-role">Islam</p>
+                <p class="teacher-description">
+                    Inspiring students with knowledge of Islamic values and teachings.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
 
+<div> <br> <br> </div>
 
+<!-- Secondary Section Teachers Start -->
+<section class="our-team-section py-5" style="background: linear-gradient(135deg, #f3e5f5, #e3f2fd);">
+    <div class="container">
+        <!-- Header -->
+        <div class="text-center mb-5">
+            <h5 class="text-uppercase text-primary mb-3" style="letter-spacing: 5px;">Our Educators</h5>
+            <h1 class="text-dark">Get to Know Our Secondary Section Teachers</h1>
+            <p class="text-muted">
+                Dedicated professionals shaping bright futures through knowledge and inspiration.
+            </p>
+        </div>
 
+        <!-- Teacher Cards -->
+        <div class="row g-4">
+            <!-- Row 1 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
+                <div class="teacher-card shadow-sm w-100">
+                    <div class="teacher-photo-wrapper">
+                        <img src="img/teacher_2.png" alt="M.F. Afra" class="teacher-photo img-fluid rounded-circle">
+                    </div>
+                    <div class="teacher-info text-center mt-4">
+                        <h3 class="teacher-name text-primary">M.F. Afra</h3>
+                        <p class="teacher-role">English Language</p>
+                        <p class="teacher-description">Dedicated to inspiring a love for English language and literature.</p>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
+                <div class="teacher-card shadow-sm w-100">
+                    <div class="teacher-photo-wrapper">
+                        <img src="img/teacher_2.png" alt="F. Bushifa" class="teacher-photo img-fluid rounded-circle">
+                    </div>
+                    <div class="teacher-info text-center mt-4">
+                        <h3 class="teacher-name text-primary">F. Bushifa</h3>
+                        <p class="teacher-role">English Language</p>
+                        <p class="teacher-description">Empowering students with creative and engaging English lessons.</p>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
+                <div class="teacher-card shadow-sm w-100">
+                    <div class="teacher-photo-wrapper">
+                        <img src="img/teacher_2.png" alt="M.J.F. Shimla" class="teacher-photo img-fluid rounded-circle">
+                    </div>
+                    <div class="teacher-info text-center mt-4">
+                        <h3 class="teacher-name text-primary">M.J.F. Shimla</h3>
+                        <p class="teacher-role">Islam</p>
+                        <p class="teacher-description">Inspiring students with Islamic teachings and principles.</p>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
+                <div class="teacher-card shadow-sm w-100">
+                    <div class="teacher-photo-wrapper">
+                        <img src="img/sir-2.png" alt="SM. Saiyaf" class="teacher-photo img-fluid rounded-circle">
+                    </div>
+                    <div class="teacher-info text-center mt-4">
+                        <h3 class="teacher-name text-primary">S.M. Saiyaf</h3>
+                        <p class="teacher-role">Islam, Second Language Sinhala</p>
+                        <p class="teacher-description">Guiding students in faith and language with enthusiasm.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div class="py-3"></div>
 
+        <div class="row g-4">
+            <!-- Row 2 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
+                <div class="teacher-card shadow-sm w-100">
+                    <div class="teacher-photo-wrapper">
+                        <img src="img/teacher_2.png" alt="Amani Raiha" class="teacher-photo img-fluid rounded-circle">
+                    </div>
+                    <div class="teacher-info text-center mt-4">
+                        <h3 class="teacher-name text-primary">Amani Raiha</h3>
+                        <p class="teacher-role">Second Language Sinhala</p>
+                        <p class="teacher-description">Helping students achieve proficiency in Sinhala.</p>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
+                <div class="teacher-card shadow-sm w-100">
+                    <div class="teacher-photo-wrapper">
+                        <img src="img/teacher_2.png" alt="S. Kirisanthani" class="teacher-photo img-fluid rounded-circle">
+                    </div>
+                    <div class="teacher-info text-center mt-4">
+                        <h3 class="teacher-name text-primary">S. Kirisanthani</h3>
+                        <p class="teacher-role">Tamil Language</p>
+                        <p class="teacher-description">Inspiring love for Tamil language and literature.</p>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
+                <div class="teacher-card shadow-sm w-100">
+                    <div class="teacher-photo-wrapper">
+                        <img src="img/teacher_2.png" alt="MSF. Hamtha" class="teacher-photo img-fluid rounded-circle">
+                    </div>
+                    <div class="teacher-info text-center mt-4">
+                        <h3 class="teacher-name text-primary">M.S.F. Hamtha</h3>
+                        <p class="teacher-role">Tamil Language</p>
+                        <p class="teacher-description">Encouraging mastery of Tamil through creative methods.</p>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
+                <div class="teacher-card shadow-sm w-100">
+                    <div class="teacher-photo-wrapper">
+                        <img src="img/teacher_2.png" alt="MS. Nasrin" class="teacher-photo img-fluid rounded-circle">
+                    </div>
+                    <div class="teacher-info text-center mt-4">
+                        <h3 class="teacher-name text-primary">M.S. Nasrin</h3>
+                        <p class="teacher-role">Mathematics</p>
+                        <p class="teacher-description">Making mathematics simple and enjoyable for all students.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div class="py-3"></div>
 
+        <div class="row g-4">
+            <!-- Row 3 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
+                <div class="teacher-card shadow-sm w-100">
+                    <div class="teacher-photo-wrapper">
+                        <img src="img/sir-2.png" alt="MIMI. Yoosuf" class="teacher-photo img-fluid rounded-circle">
+                    </div>
+                    <div class="teacher-info text-center mt-4">
+                        <h3 class="teacher-name text-primary">M.I.M.I. Yoosuf</h3>
+                        <p class="teacher-role">Mathematics</p>
+                        <p class="teacher-description">Passionate about fostering a love for problem-solving and numbers.</p>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
+                <div class="teacher-card shadow-sm w-100">
+                    <div class="teacher-photo-wrapper">
+                        <img src="img/sir-2.png" alt="K. Kathees" class="teacher-photo img-fluid rounded-circle">
+                    </div>
+                    <div class="teacher-info text-center mt-4">
+                        <h3 class="teacher-name text-primary">K. Kathees</h3>
+                        <p class="teacher-role">ICT</p>
+                        <p class="teacher-description">Bringing the world of technology closer to students.</p>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
+                <div class="teacher-card shadow-sm w-100">
+                    <div class="teacher-photo-wrapper">
+                        <img src="img/teacher_2.png" alt="F. Nuhasara" class="teacher-photo img-fluid rounded-circle">
+                    </div>
+                    <div class="teacher-info text-center mt-4">
+                        <h3 class="teacher-name text-primary">F. Nuhasara</h3>
+                        <p class="teacher-role">ICT</p>
+                        <p class="teacher-description">Simplifying ICT concepts for students to excel in the digital age.</p>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
+                <div class="teacher-card shadow-sm w-100">
+                    <div class="teacher-photo-wrapper">
+                        <img src="img/teacher_2.png" alt="S. Pavithra" class="teacher-photo img-fluid rounded-circle">
+                    </div>
+                    <div class="teacher-info text-center mt-4">
+                        <h3 class="teacher-name text-primary">S. Pavithra</h3>
+                        <p class="teacher-role">History</p>
+                        <p class="teacher-description">Exploring the lessons of history with curiosity and depth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div class="py-3"></div>
 
+        <div class="row g-4">
+            <!-- Row 4 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
+                <div class="teacher-card shadow-sm w-100">
+                    <div class="teacher-photo-wrapper">
+                        <img src="img/teacher_2.png" alt="M.I.F. Irfana" class="teacher-photo img-fluid rounded-circle">
+                    </div>
+                    <div class="teacher-info text-center mt-4">
+                        <h3 class="teacher-name text-primary">M.I.F. Irfana</h3>
+                        <p class="teacher-role">History</p>
+                        <p class="teacher-description">Unveiling historical insights to develop informed individuals.</p>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
+                <div class="teacher-card shadow-sm w-100">
+                    <div class="teacher-photo-wrapper">
+                        <img src="img/teacher_2.png" alt="R.F. Sameera" class="teacher-photo img-fluid rounded-circle">
+                    </div>
+                    <div class="teacher-info text-center mt-4">
+                        <h3 class="teacher-name text-primary">R.F. Sameera</h3>
+                        <p class="teacher-role">Geography</p>
+                        <p class="teacher-description">Encouraging students to explore and understand the Earth's diversity.</p>
+                    </div>
+                </div>
+            </div>
 
-     <!-- Footer Start -->
-     <div class="container-fluid bg-dark text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
-        <div class="row pt-5">
-            <div class="col-lg-7 col-md-12">
-                <div class="row">
-                    <div class="col-md-6 mb-5">
-                        <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Get In Touch</h5>
-                        <p><i class="fa fa-phone-alt mr-2"></i>+94 77 476 0699</p>
-                        <p><i class="fa fa-envelope mr-2"></i>info@sahaholdings.com</p>
-                        <!-- <div class="d-flex justify-content-start mt-4">
-                            <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+            <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
+                <div class="teacher-card shadow-sm w-100">
+                    <div class="teacher-photo-wrapper">
+                        <img src="img/teacher_2.png" alt="MJF. Samha" class="teacher-photo img-fluid rounded-circle">
+                    </div>
+                    <div class="teacher-info text-center mt-4">
+                        <h3 class="teacher-name text-primary">M.J.F. Samha</h3>
+                        <p class="teacher-role">Geography</p>
+                        <p class="teacher-description">Nurturing a passion for exploring the physical and cultural world.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
+                <div class="teacher-card shadow-sm w-100">
+                    <div class="teacher-photo-wrapper">
+                        <img src="img/teacher_2.png" alt="MSF. Shifa" class="teacher-photo img-fluid rounded-circle">
+                    </div>
+                    <div class="teacher-info text-center mt-4">
+                        <h3 class="teacher-name text-primary">M.S.F. Shifa</h3>
+                        <p class="teacher-role">Science</p>
+                        <p class="teacher-description">Making science exciting and accessible through hands-on learning.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Secondary Section Teachers End -->
+
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+    <div class="row pt-5">
+        <div class="col-lg-7 col-md-12">
+            <div class="row">
+                <div class="col-md-6 mb-5">
+                    <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Get In Touch</h5>
+                    <p><i class="fa fa-phone-alt mr-2"></i>+94 77 476 0699</p>
+                    <p><i class="fa fa-envelope mr-2"></i>info@sahaholdings.com</p>
+
+                    <div class="d-flex flex-wrap mt-4">
+                        <!-- First row of icons -->
+                        <div class="d-flex justify-content-start mb-2">
+                            <a class="btn btn-outline-light btn-square mr-2" href="#"><i
+                                    class="fab fa-whatsapp"></i></a>
+                            <a class="btn btn-outline-light btn-square mr-2" href="#"><i
+                                    class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-square mr-2" href="#"><i
+                                    class="fab fa-instagram"></i></a>
                             <a class="btn btn-outline-light btn-square mr-2" href="#"><i
                                     class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-outline-light btn-square mr-2" href="#"><i
+                                    class="fab fa-telegram-plane"></i></a>
+                        </div>
+                        <!-- Second row of icons -->
+                        <div class="d-flex justify-content-start">
+                            <a class="btn btn-outline-light btn-square mr-2" href="#"><i
+                                    class="fas fa-envelope"></i></a>
+                            <a class="btn btn-outline-light btn-square mr-2" href="#"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-square mr-2" href="#"><i
                                     class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-outline-light btn-square" href="#"><i class="fab fa-instagram"></i></a>
-                        </div> -->
-                        <div class="d-flex flex-wrap mt-4">
-                            <!-- First row of icons -->
-                            <div class="d-flex justify-content-start mb-2">
-                                <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-whatsapp"></i></a>
-                                <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-youtube"></i></a>
-                                <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-telegram-plane"></i></a>
-                            </div>
-                            <!-- Second row of icons -->
-                            <div class="d-flex justify-content-start">
-                                <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fas fa-envelope"></i></a>
-                                <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-pinterest"></i></a>
-                                <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-tiktok"></i></a>
-                            </div>
-                        </div>
-                        
-                        
-                    </div>
-                    <div class="col-md-6 mb-5">
-                        <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Our Courses</h5>
-                        <div class="d-flex flex-column justify-content-start">
-                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Primary Section</a>
-                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Secondary Section</a>
+                            <a class="btn btn-outline-light btn-square mr-2" href="#"><i
+                                    class="fab fa-pinterest"></i></a>
+                            <a class="btn btn-outline-light btn-square mr-2" href="#"><i
+                                    class="fab fa-tiktok"></i></a>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-5 col-md-12 mb-5">
-                <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Newsletter</h5>
-                <p>Stay Updated with SAHA LEARNING HUB
-                    Subscribe to our newsletter to receive the latest updates, school events, educational resources, 
-                    and insights straight to your inbox. Be a part of our vibrant learning community!</p>
-                <div class="w-100">
-                    <div class="input-group">
-                        <input type="text" class="form-control border-light" style="padding: 30px;"
-                            placeholder="Your Email Address">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary px-4">Sign Up</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5"
-        style="border-color: rgba(256, 256, 256, .1) !important;">
-        <div class="row">
-            <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-                <p class="m-0 text-white">&copy; <a href="#"> 2024</a> All Rights Reserved. Designed by <a
-                        href="https://sahaholdings.com/">Saha Holdings (Pvt) Ltd</a>
-                </p>
-            </div>
-            <div class="col-lg-6 text-center text-md-right">
-                <ul class="nav d-inline-flex">
-                    <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">Privacy</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">Terms</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">FAQs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">Help</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
 
-    <!-- Back to Top -->
+
+                </div>
+                <!-- <div class="col-md-6 mb-5">
+                    <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Our Courses</h5>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Primary
+                            Section</a>
+                        <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Secondary
+                            Section</a>
+                    </div>
+                </div> -->
+                <div class="col-md-6 mb-5">
+                    <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Quick Links</h5>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a href="index.html" class="text-white mb-2"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                        <a href="about.html" class="text-white mb-2"><i class="fa fa-angle-right mr-2"></i>About</a>
+                        <a href="course.html" class="text-white mb-2"><i class="fa fa-angle-right mr-2"></i>Primary Section (1-5)</a>
+                        <a href="secondary.html" class="text-white mb-2"><i class="fa fa-angle-right mr-2"></i>Secondary Section (6-11)</a>
+                        <a href="teacher.html" class="text-white mb-2"><i class="fa fa-angle-right mr-2"></i>Teachers</a>
+                        <a href="blog.html" class="text-white mb-2"><i class="fa fa-angle-right mr-2"></i>Blog List</a>
+                        <a href="contact.html" class="text-white mb-2"><i class="fa fa-angle-right mr-2"></i>Contact</a>
+                    </div>
+                </div>                    
+            </div>
+        </div>
+        <div class="col-lg-5 col-md-12 mb-5">
+            <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Newsletter</h5>
+            <p>Stay Updated with SAHA LEARNING HUB
+                Subscribe to our newsletter to receive the latest updates, school events, educational resources,
+                and insights straight to your inbox. Be a part of our vibrant learning community!</p>
+            <div class="w-100">
+                <div class="input-group">
+                    <input type="text" class="form-control border-light" style="padding: 30px;"
+                        placeholder="Your Email Address">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary px-4">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5"
+    style="border-color: rgba(256, 256, 256, .1) !important;">
+    <div class="row">
+        <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+            <p class="m-0 text-white">&copy; <a href="#"> 2024</a> All Rights Reserved. Designed by <a
+                    href="https://sahaholdings.com/">Saha Learning Hub</a>
+            </p>
+        </div>
+        <div class="col-lg-6 text-center text-md-right">
+            <ul class="nav d-inline-flex">
+                <li class="nav-item">
+                    <a class="nav-link text-white py-0" href="#">Privacy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white py-0" href="#">Terms</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white py-0" href="#">FAQs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white py-0" href="#">Help</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+<!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
 
-    <!-- JavaScript Libraries -->
+<!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>

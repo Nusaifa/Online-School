@@ -10408,3 +10408,96 @@ h6,
 }
 
 
+/* Section Container */
+.professional-teachers-section {
+  padding: 60px 20px;
+  background-color: #f9fafc;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Header Section */
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.section-header p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Teacher Grid */
+.teachers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Individual Card */
+.teacher-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.teacher-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Image */
+.teacher-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  
+}
+
+/* Card Content */
+.teacher-info h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.teacher-info p {
+  font-size: 0.95rem;
+  color: #777;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .teachers-grid {
+    gap: 15px;
+  }
+
+  .teacher-card {
+    padding: 15px;
+  }
+
+  .teacher-info h3 {
+    font-size: 1rem;
+  }
+
+  .teacher-info p {
+    font-size: 0.85rem;
+  }
+}
