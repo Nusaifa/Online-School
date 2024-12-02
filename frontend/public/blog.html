@@ -1,29 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>Blog - LEARNING HUB</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <link rel="icon" href="https://i.ibb.co/qrxhwTW/logo.png" type="image/png">
-
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
-
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Stay updated with the latest news, articles, and insights from SAHA Learning Hub. Explore our blog for educational tips, trends, and updates.">
+        <meta name="keywords" content="blog, news, online education, e-learning insights, SAHA Learning Hub blog, educational tips">
+        <meta name="author" content="SAHA Learning Hub Team">
+        <meta name="robots" content="index, follow">
+    
+        <title>Blog - News and Insights | SAHA Learning Hub</title>
+    
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="Blog - SAHA Learning Hub">
+        <meta property="og:description" content="Explore the SAHA Learning Hub Blog for the latest updates, tips, and trends in online education and e-learning.">
+        <meta property="og:url" content="http://localhost:3000/blog">
+        <meta property="og:image" content="https://i.ibb.co/qrxhwTW/logo.png">
+        <meta property="og:type" content="website">
+    
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Blog - News and Insights | SAHA Learning Hub">
+        <meta name="twitter:description" content="Learn about the latest trends and updates in online education through the SAHA Learning Hub blog.">
+        <meta name="twitter:image" content="https://i.ibb.co/qrxhwTW/logo.png">
+    
+        <!-- Canonical Tag -->
+        <link rel="canonical" href="http://localhost:3000/blog">
+    
+        <!-- Favicon -->
+        <link rel="icon" href="https://i.ibb.co/qrxhwTW/logo.png" type="image/png">
+    
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+        <!-- Font Awesome for Icons -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    
+        <!-- Structured Data -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            "name": "SAHA Learning Hub Blog",
+            "description": "The SAHA Learning Hub Blog offers articles, news, and tips about online education, teaching, and learning.",
+            "url": "http://localhost:3000/blog",
+            "publisher": {
+                "@type": "Organization",
+                "name": "SAHA Learning Hub",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://i.ibb.co/qrxhwTW/logo.png"
+                }
+            },
+            "blogPost": {
+                "@type": "BlogPosting",
+                "headline": "Explore Our Latest Educational Insights",
+                "image": "https://i.ibb.co/qrxhwTW/logo.png",
+                "author": {
+                    "@type": "Person",
+                    "name": "SAHA Learning Hub Team"
+                }
+            }
+        }
+        </script>
+    </head>
 
 <body>
 
@@ -33,7 +75,7 @@
         <div class="row align-items-center">
             <!-- Logo Section -->
             <div class="col-lg-auto text-center" style="padding-right: 15px;">
-                <img src="https://i.ibb.co/yknRZPL/logo.png" alt="Saha Logo"
+                <img src="https://i.ibb.co/tzFNH9d/logo.png" alt="Saha Logo"
                     style="width: 140px; height: 140px; box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);">
             </div>
 
@@ -62,7 +104,7 @@
     </div>
 </div>   
 <!-- Topbar end --> 
-     
+
 <!-- Navbar start -->
 <div class="container-fluid">
     <div class="row border-top px-xl-5">
@@ -98,11 +140,7 @@
                             <a href="teacher.html" class="nav-link">Teachers</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Blog</a>
-                            <div class="dropdown-menu">
-                                <a href="blog.html" class="dropdown-item">Blog List</a>
-                                <a href="single.html" class="dropdown-item">Blog Detail</a>
-                            </div>
+                            <a href="blog.html" class="nav-link">News</a>
                         </li>
                         <li class="nav-item">
                             <a href="contact.html" class="nav-link">Contact</a>
@@ -121,26 +159,171 @@
 </div>
 <!-- Navbar End -->
 
+<!-- Carousel Start -->
+<div class="container-fluid p-0 pb-5 mb-5">
+    <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="min-height: 300px;">
+                <img class="position-relative w-100" src="img/carousel-1.jpg"
+                    style="min-height: 300px; object-fit: cover;">
+                <div class="carousel-caption d-flex align-items-center justify-content-center">
+                    <div class="p-5" style="width: 100%; max-width: 900px;">
+                        <h1 class="display-3 text-white mb-md-4" style="text-align: center;">கற்றல் இணையத்தில் வெற்றி வாழ்க்கையில்</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Carousel End -->
+
+<!-- Blog Section Start -->
+    <section class="custom-blog-container">
+        <div class="custom-blog-grid">
+            
+            <!-- Blog Card 1 -->
+            <div class="custom-blog-card">
+                <div class="custom-blog-image">
+                    <img src="img/news-1.jpg" alt="SAHA LEARNING HUB">
+                </div>
+                <div class="custom-blog-content">
+                    <h3 class="custom-blog-title">🎓 SAHA LEARNING HUB 🎓</h3>
+                    <p class="custom-blog-preview">
+                        🌟 தரம் 1 தொடக்கம் 11 வரையான மாணவர்களுக்கான வகுப்புகள் யாவும் எதிர்வரும் December 03 முதல் ஆரம்பம்..! 
+                    </p>
+                    <p class="custom-blog-details">
+                        📚 அனைத்துப் பாடங்களுக்குமான திறமையான ஆசிரியர்களின் நேர்த்தியான வழிகாட்டலுடன் ஆரம்பிக்கப்படவுள்ளது.<br>
+                        🌟 கீழே உள்ள Link இனைப் பயன்படுத்தி மாணவர்களை இணைத்துக் கொள்ளமுடியும்:<br>
+                        <a href="https://forms.gle/ULcgQ1eP1dLcp9UN7" target="_blank">Join Now</a><br>
+                        💁‍♂ மேலதிக விபரங்களுக்கு:<br>
+                        📞 077 47 606 99<br>
+                        WhatsApp: <a href="https://chat.whatsapp.com/KtBjMgVNsXiAgN6UdqVbjX" target="_blank">Chat Here</a>
+                    </p>
+                    <button class="custom-read-more-btn">Read More</button>
+                </div>
+            </div>
+
+            <!-- Blog Card 2 -->
+            <div class="custom-blog-card">
+                <div class="custom-blog-image">
+                    <img src="img/news-2.jpg" alt="Google Meet Classes">
+                </div>
+                <div class="custom-blog-content">
+                    <h3 class="custom-blog-title">🎓 SAHA LEARNING HUB 🎓</h3>
+                    <p class="custom-blog-preview">
+                        🌟 தரம் 1 தொடக்கம் 11 வரையான மாணவர்களுக்கான வகுப்புகள் யாவும் எதிர்வரும் December 03 முதல் ஆரம்பம்..! 
+                    </p>
+                    <p class="custom-blog-details">
+                        🌟 கீழே உள்ள Link இனைப் பயன்படுத்தி மாணவர்களை இணைத்துக் கொள்ளமுடியும்.<br>
+                        வகுப்புகள் நாளை ஆரம்பமாகும். (25.11.2024)<br>
+                        <a href="https://forms.gle/ULcgQ1eP1dLcp9UN7" target="_blank">Join Now</a><br>
+                        💁‍♂ மேலதிக விபரங்களுக்கு:<br>
+                        📞 077 47 606 99<br>
+                        WhatsApp: <a href="https://chat.whatsapp.com/KtBjMgVNsXiAgN6UdqVbjX" target="_blank">Chat Here</a>
+                    </p>
+                    <button class="custom-read-more-btn">Read More</button>
+                </div>
+            </div>
+
+            <!-- Blog Card 3 -->
+            <div class="custom-blog-card">
+                <div class="custom-blog-image">
+                    <img src="img/news-3.jpg" alt="Exam Preparation">
+                </div>
+                <div class="custom-blog-content">
+                    <h3 class="custom-blog-title">🎓 SAHA LEARNING HUB 🎓</h3>
+                    <p class="custom-blog-preview">
+                        🌟 தரம் 1 தொடக்கம் 11 வரையான மூன்றாம் தவணைப் பரீட்சைக்கான மீட்டல் பயிற்சிகள்.
+                    </p>
+                    <p class="custom-blog-details">
+                        🌟 மூன்றாம் தவணைப் பரீட்சைக்கான வகுப்புகள் எதிர்வரும் December 03 முதல் ஆரம்பம்.<br>
+                        🌟 ஒரு மணிநேர கட்டணம் ரூ. 25 மாத்திரமே!<br>
+                        🔗 கீழே உள்ள Link இனைப் பயன்படுத்தி மாணவர்களை இணைத்துக் கொள்ளமுடியும்:<br>
+                        <a href="https://forms.gle/ULcgQ1eP1dLcp9UN7" target="_blank">Join Now</a><br>
+                        💁‍♂ மேலதிக விபரங்களுக்கு:<br>
+                        📞 077 47 606 99<br>
+                        WhatsApp: <a href="https://chat.whatsapp.com/KtBjMgVNsXiAgN6UdqVbjX" target="_blank">Chat Here</a>
+                    </p>
+                    <button class="custom-read-more-btn">Read More</button>
+                </div>
+            </div>
+
+            <!-- Blog Card 4 -->
+            <div class="custom-blog-card">
+                <div class="custom-blog-image">
+                    <img src="img/news-4.jpg" alt="Exam Preparation">
+                </div>
+                <div class="custom-blog-content">
+                    <h3 class="custom-blog-title">🎓 SAHA LEARNING HUB 🎓</h3>
+                    <p class="custom-blog-preview">
+                        📚தரம் 1 தொடக்கம் 11 வரையான மாணவர்களுக்கான  வகுப்புகள் யாவும் எதிர்வரும் December 03 முதல் ஆரம்பம்.
+                    </p>
+                    <p class="custom-blog-details">
+                        🌟 Google Meet ஊடாக வகுப்புகள் இடம்பெறும்.<br>
+                        🌟ஒரு மணிநேர கட்டணம் ரூ. 25 மாத்திரமே!<br>
+                        🔗 கீழே உள்ள Link இனைப் பயன்படுத்தி மாணவர்களை இணைத்துக் கொள்ளமுடியும்:<br>
+                        <a href="https://forms.gle/ULcgQ1eP1dLcp9UN7" target="_blank">Join Now</a><br>
+                        💁‍♂ மேலதிக விபரங்களுக்கு:<br>
+                        📞 077 47 606 99<br>
+                        WhatsApp: <a href="https://chat.whatsapp.com/KtBjMgVNsXiAgN6UdqVbjX" target="_blank">Chat Here</a>
+                    </p>
+                    <button class="custom-read-more-btn">Read More</button>
+                </div>
+            </div>
+
+            <!-- Blog Card 5 -->
+            <div class="custom-blog-card">
+                <div class="custom-blog-image">
+                    <img src="img/news-5.jpg" alt="Exam Preparation">
+                </div>
+                <div class="custom-blog-content">
+                    <h3 class="custom-blog-title">🎓 SAHA LEARNING HUB 🎓</h3>
+                    <p class="custom-blog-preview">
+                        🎓 SAHA LEARNING HUB ஊடாக மாணவர்களுக்கான சிறந்த இணையவழி கல்வி.
+                    </p>
+                    <p class="custom-blog-details">
+                        🌟 தரம் 1 தொடக்கம் 11 வரையான மாணவர்களுக்கான மூன்றாம் தவணைப் பரீட்சைக்குரிய மீட்டல் பயிற்சிகளுக்கான வகுப்புகள் யாவும் எதிர்வரும் December 03 முதல் ஆரம்பம்.<br>
+                        🌟 ஒரு மணிநேர கட்டணம் ரூ. 25 மாத்திரமே!<br>
+                        🔗 கீழே உள்ள Link இனைப் பயன்படுத்தி மாணவர்களை இணைத்துக் கொள்ளமுடியும்:<br>
+                        <a href="https://forms.gle/ULcgQ1eP1dLcp9UN7" target="_blank">Join Now</a><br>
+                        💁‍♂ மேலதிக விபரங்களுக்கு:<br>
+                        📞 077 47 606 99<br>
+                        WhatsApp: <a href="https://chat.whatsapp.com/KtBjMgVNsXiAgN6UdqVbjX" target="_blank">Chat Here</a>
+                    </p>
+                    <button class="custom-read-more-btn">Read More</button>
+                </div>
+            </div>
+
+            <!-- Blog Card 6 -->
+            <div class="custom-blog-card">
+                <div class="custom-blog-image">
+                    <img src="img/news-6.jpg" alt="Exam Preparation">
+                </div>
+                <div class="custom-blog-content">
+                    <h3 class="custom-blog-title">🎓 SAHA LEARNING HUB 🎓</h3>
+                    <p class="custom-blog-preview">
+                        📚தரம் 1 தொடக்கம் 11 வரையான மாணவர்களுக்கான  வகுப்புகள் யாவும் எதிர்வரும் December 03 முதல் ஆரம்பம்.
+                    </p>
+                    <p class="custom-blog-details">
+                        🌟 Google Meet ஊடாக வகுப்புகள் இடம்பெறும்<br>
+                        🌟 ஒரு மணிநேர கட்டணம் ரூ. 25 மாத்திரமே!<br>
+                        🚀பதிவு செய்வதற்கு இன்னும் 01 நாள் மாத்திரமே!<br>
+                        🔗 கீழே உள்ள Link இனைப் பயன்படுத்தி மாணவர்களை இணைத்துக் கொள்ளமுடியும்:<br>
+                        <a href="https://forms.gle/ULcgQ1eP1dLcp9UN7" target="_blank">Join Now</a><br>
+                        💁‍♂ மேலதிக விபரங்களுக்கு:<br>
+                        📞 077 47 606 99<br>
+                        WhatsApp: <a href="https://chat.whatsapp.com/KtBjMgVNsXiAgN6UdqVbjX" target="_blank">Chat Here</a>
+                    </p>
+                    <button class="custom-read-more-btn">Read More</button>
+                </div>
+            </div>
+
+            <!-- Add more blog cards as needed -->
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        </div>
+    </section>
+    <!-- Blog Section End -->
 
 <!-- Footer Start -->
 <div class="container-fluid bg-dark text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
@@ -200,7 +383,7 @@
                         <a href="course.html" class="text-white mb-2"><i class="fa fa-angle-right mr-2"></i>Primary Section (1-5)</a>
                         <a href="secondary.html" class="text-white mb-2"><i class="fa fa-angle-right mr-2"></i>Secondary Section (6-11)</a>
                         <a href="teacher.html" class="text-white mb-2"><i class="fa fa-angle-right mr-2"></i>Teachers</a>
-                        <a href="blog.html" class="text-white mb-2"><i class="fa fa-angle-right mr-2"></i>Blog List</a>
+                        <a href="blog.html" class="text-white mb-2"><i class="fa fa-angle-right mr-2"></i>Latest News</a>
                         <a href="contact.html" class="text-white mb-2"><i class="fa fa-angle-right mr-2"></i>Contact</a>
                     </div>
                 </div>                    
@@ -255,18 +438,45 @@
 <!-- Back to Top -->
 <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
+<!-- Contact Javascript File -->
+<script src="mail/jqBootstrapValidation.min.js"></script>
+<script src="mail/contact.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
+
+<!-- JavaScript for Read More/Less Functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const readMoreButtons = document.querySelectorAll('.custom-read-more-btn');
+
+            readMoreButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const blogDetails = button.previousElementSibling;
+
+                    if (blogDetails.classList.contains('show')) {
+                        blogDetails.classList.remove('show');
+                        button.textContent = 'Read More';
+                        // Optionally, collapse the preview text if needed
+                        const previewText = button.parentElement.querySelector('.custom-blog-preview');
+                        previewText.style.maxHeight = '80px';
+                    } else {
+                        blogDetails.classList.add('show');
+                        button.textContent = 'Read Less';
+                        // Expand the preview text
+                        const previewText = button.parentElement.querySelector('.custom-blog-preview');
+                        previewText.style.maxHeight = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+
 </body>
-
 </html>
