@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Profile Update</title>
+    <link
+      rel="icon"
+      href="https://i.ibb.co/qrxhwTW/logo.png"
+      type="image/png"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Topbar start -->
+    <div class="topbar">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <!-- Logo Section -->
+          <div class="col-lg-auto logo-section">
+            <img
+              src="https://i.ibb.co/tzFNH9d/logo.png"
+              alt="Saha Logo"
+              class="logo-img"
+            />
+          </div>
+
+          <!-- Company Name and Tagline -->
+          <div class="col company-info">
+            <h1 class="company-name">SAHA LEARNING HUB</h1>
+            <p class="tagline">கற்றல் இணையத்தில், வெற்றி வாழ்க்கையில்.</p>
+          </div>
+
+          <!-- Contact Information -->
+          <div class="col-lg-3 contact-info">
+            <div class="email">
+              <i class="fa fa-envelope"></i>
+              info@sahaholdings.com
+            </div>
+            <div class="phone">
+              <i class="fa fa-phone"></i>
+              +94 77 476 0699
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Topbar end -->
+
+    <!-- Navbar Start -->
+    <div class="custom-navbar-container">
+      <nav class="custom-navbar">
+        <button class="custom-navbar-toggler" id="navbar-toggler">☰</button>
+        <div class="custom-navbar-collapse" id="navbar-collapse">
+          <ul class="custom-navbar-menu">
+            <li class="custom-nav-item">
+              <a href="index.html" class="custom-nav-link" id="nav-home"
+                >Home</a
+              >
+            </li>
+            <li class="custom-nav-item">
+              <a href="about.html" class="custom-nav-link" id="nav-about"
+                >About</a
+              >
+            </li>
+            <li class="custom-nav-item dropdown">
+              <a
+                href="#"
+                class="custom-nav-link dropdown-toggle"
+                id="nav-subjects"
+                >Subjects</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="course.html" class="dropdown-item"
+                    >Primary Section</a
+                  >
+                </li>
+                <li>
+                  <a href="secondary.html" class="dropdown-item"
+                    >Secondary Section</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="custom-nav-item">
+              <a href="teacher.html" class="custom-nav-link" id="nav-teachers"
+                >Teachers</a
+              >
+            </li>
+            <li class="custom-nav-item">
+              <a href="blog.html" class="custom-nav-link" id="nav-news">News</a>
+            </li>
+            <li class="custom-nav-item">
+              <a href="contact.html" class="custom-nav-link" id="nav-contact"
+                >Contact Us</a
+              >
+            </li>
+            <li
+              class="custom-nav-item dropdown"
+              id="profile-section"
+              style="display: none"
+            >
+              <a
+                href="#"
+                class="custom-nav-link dropdown-toggle"
+                id="nav-profile"
+                >Profile</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="profile.html" class="dropdown-item">User Profile</a>
+                </li>
+                <li>
+                  <a href="password.html" class="dropdown-item"
+                    >Password Change</a
+                  >
+                </li>
+                <li>
+                  <a href="#" id="logout-link" class="dropdown-item">Logout</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="custom-auth-links" id="auth-links">
+            <a href="register.html" class="custom-btn primary-btn">Sign Up</a>
+            <a href="login.html" class="custom-btn secondary-btn">Login</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 pb-5 mb-5">
+      <div
+        id="header-carousel"
+        class="carousel slide carousel-fade"
+        data-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active" style="min-height: 300px">
+            <img
+              class="position-relative w-100"
+              src="img/carousel-1.jpg"
+              style="min-height: 300px; object-fit: cover"
+            />
+            <div
+              class="carousel-caption d-flex align-items-center justify-content-center"
+            >
+              <div class="p-5" style="width: 100%; max-width: 900px">
+                <h1
+                  class="display-3 text-white mb-md-4"
+                  style="text-align: center"
+                >
+                  கற்றல் இணையத்தில் வெற்றி வாழ்க்கையில்
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Carousel End -->
+    <!-- Profile Update Page -->
+    <div class="container py-5">
+      <div class="text-center mb-5">
+        <h5
+          class="text-primary text-uppercase mb-3"
+          style="letter-spacing: 5px"
+        >
+          User Profile
+        </h5>
+        <h1>Update Your Profile</h1>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="profile-form-container">
+            <div class="contact-form bg-secondary rounded p-5">
+              <form id="profileUpdateForm">
+                <h5 class="text-primary mb-4">Personal Information</h5>
+
+                <!-- Personal Information Section -->
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <label for="fullName" class="form-label">Full Name</label>
+                    <input
+                      type="text"
+                      id="fullName"
+                      name="fullName"
+                      class="form-control"
+                      required
+                    />
+                    <span
+                      id="fullNameError"
+                      class="error-message text-danger"
+                    ></span>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <label for="initials" class="form-label"
+                      >Initials With Name</label
+                    >
+                    <input
+                      type="text"
+                      id="initials"
+                      name="initials"
+                      class="form-control"
+                      required
+                    />
+                    <span
+                      id="initialsError"
+                      class="error-message text-danger"
+                    ></span>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <label for="gender" class="form-label">Gender</label>
+                    <select
+                      id="gender"
+                      name="gender"
+                      class="form-control"
+                      required
+                    >
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                    </select>
+                    <span
+                      id="genderError"
+                      class="error-message text-danger"
+                    ></span>
+                  </div>
+
+                  <div class="col-md-6 form-group">
+                    <label for="guardianName" class="form-label"
+                      >Guardian Name</label
+                    >
+                    <input
+                      type="text"
+                      id="guardianName"
+                      name="guardianName"
+                      class="form-control"
+                    />
+                  </div>
+
+                  <div class="col-md-6 form-group">
+                    <label for="profilePicture" class="form-label"
+                      >Profile Picture</label
+                    >
+                    <input
+                      type="file"
+                      id="profilePicture"
+                      name="profilePicture"
+                      class="form-control"
+                      accept="image/*"
+                    />
+                    <span
+                      id="profilePictureError"
+                      class="error-message text-danger"
+                    ></span>
+                  </div>
+                </div>
+
+                <!-- Contact Details Section -->
+                <h5 class="text-primary mt-4 mb-4">Contact Details</h5>
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="form-control"
+                      disabled
+                    />
+                    <span
+                      id="emailError"
+                      class="error-message text-danger"
+                    ></span>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <label for="mobileNumber" class="form-label"
+                      >Mobile Number</label
+                    >
+                    <input
+                      type="text"
+                      id="mobileNumber"
+                      name="mobileNumber"
+                      class="form-control"
+                      placeholder="+94XXXXXXXXX"
+                      required
+                    />
+                    <span
+                      id="mobileNumberError"
+                      class="error-message text-danger"
+                    ></span>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <label for="address" class="form-label">Address</label>
+                    <input
+                      type="text"
+                      id="address"
+                      name="address"
+                      class="form-control"
+                      required
+                    />
+                    <span
+                      id="addressError"
+                      class="error-message text-danger"
+                    ></span>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <label for="district" class="form-label">District</label>
+                    <input
+                      type="text"
+                      id="district"
+                      name="district"
+                      class="form-control"
+                      required
+                    />
+                    <span
+                      id="districtError"
+                      class="error-message text-danger"
+                    ></span>
+                  </div>
+                </div>
+
+                <!-- Academic Information Section -->
+                <h5 class="text-primary mt-4 mb-4">Academic Information</h5>
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <label for="section" class="form-label">Section</label>
+                    <select
+                      id="section"
+                      name="section"
+                      class="form-control"
+                      required
+                    >
+                      <option value="" disabled selected>Select Section</option>
+                      <option value="primary">Primary Section</option>
+                      <option value="secondary">Secondary Section</option>
+                    </select>
+                    <span
+                      id="sectionError"
+                      class="error-message text-danger"
+                    ></span>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <label for="grade" class="form-label">Grade</label>
+                    <select
+                      id="grade"
+                      name="grade"
+                      class="form-control"
+                      required
+                    >
+                      <option value="" disabled selected>Select Grade</option>
+                    </select>
+                    <span
+                      id="gradeError"
+                      class="error-message text-danger"
+                    ></span>
+                  </div>
+                </div>
+
+                <!-- Subject Selection Container -->
+                <div id="subjects" class="mt-4"></div>
+
+                <button type="submit" class="btn btn-primary btn-block mt-4">
+                  Update Profile
+                </button>
+              </form>
+              <!-- Message Container for Error/Success -->
+              <div id="messageContainer" class="message-container mt-3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Profile Page End -->
+
+    <!-- Footer Start -->
+    <div
+      class="container-fluid bg-dark text-white py-5 px-sm-3 px-lg-5"
+      style="margin-top: 90px"
+    >
+      <div class="row pt-5">
+        <div class="col-lg-7 col-md-12">
+          <div class="row">
+            <div class="col-md-6 mb-5">
+              <h5
+                class="text-primary text-uppercase mb-4"
+                style="letter-spacing: 5px"
+              >
+                Get In Touch
+              </h5>
+              <p><i class="fa fa-phone-alt mr-2"></i>+94 77 476 0699</p>
+              <p><i class="fa fa-envelope mr-2"></i>info@sahaholdings.com</p>
+
+              <div class="d-flex flex-wrap mt-4">
+                <!-- First row of icons -->
+                <div class="d-flex justify-content-start mb-2">
+                  <a class="btn btn-outline-light btn-square mr-2" href="#"
+                    ><i class="fab fa-whatsapp"></i
+                  ></a>
+                  <a class="btn btn-outline-light btn-square mr-2" href="#"
+                    ><i class="fab fa-youtube"></i
+                  ></a>
+                  <a class="btn btn-outline-light btn-square mr-2" href="#"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <a class="btn btn-outline-light btn-square mr-2" href="#"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a class="btn btn-outline-light btn-square mr-2" href="#"
+                    ><i class="fab fa-telegram-plane"></i
+                  ></a>
+                </div>
+                <!-- Second row of icons -->
+                <div class="d-flex justify-content-start">
+                  <a class="btn btn-outline-light btn-square mr-2" href="#"
+                    ><i class="fas fa-envelope"></i
+                  ></a>
+                  <a class="btn btn-outline-light btn-square mr-2" href="#"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a class="btn btn-outline-light btn-square mr-2" href="#"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                  <a class="btn btn-outline-light btn-square mr-2" href="#"
+                    ><i class="fab fa-pinterest"></i
+                  ></a>
+                  <a class="btn btn-outline-light btn-square mr-2" href="#"
+                    ><i class="fab fa-tiktok"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-5">
+              <h5
+                class="text-primary text-uppercase mb-4"
+                style="letter-spacing: 5px"
+              >
+                Quick Links
+              </h5>
+              <div class="d-flex flex-column justify-content-start">
+                <a href="index.html" class="text-white mb-2"
+                  ><i class="fa fa-angle-right mr-2"></i>Home</a
+                >
+                <a href="about.html" class="text-white mb-2"
+                  ><i class="fa fa-angle-right mr-2"></i>About</a
+                >
+                <a href="course.html" class="text-white mb-2"
+                  ><i class="fa fa-angle-right mr-2"></i>Primary Section
+                  (1-5)</a
+                >
+                <a href="secondary.html" class="text-white mb-2"
+                  ><i class="fa fa-angle-right mr-2"></i>Secondary Section
+                  (6-11)</a
+                >
+                <a href="teacher.html" class="text-white mb-2"
+                  ><i class="fa fa-angle-right mr-2"></i>Teachers</a
+                >
+                <a href="blog.html" class="text-white mb-2"
+                  ><i class="fa fa-angle-right mr-2"></i>Latest News</a
+                >
+                <a href="contact.html" class="text-white mb-2"
+                  ><i class="fa fa-angle-right mr-2"></i>Contact Us</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-12 mb-5">
+          <h5
+            class="text-primary text-uppercase mb-4"
+            style="letter-spacing: 5px"
+          >
+            Newsletter
+          </h5>
+          <p>
+            Stay Updated with SAHA LEARNING HUB Subscribe to our newsletter to
+            receive the latest updates, school events, educational resources,
+            and insights straight to your inbox. Be a part of our vibrant
+            learning community!
+          </p>
+          <div class="w-100">
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control border-light"
+                style="padding: 30px"
+                placeholder="Your Email Address"
+              />
+              <div class="input-group-append">
+                <button class="btn btn-primary px-4">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5"
+      style="border-color: rgba(256, 256, 256, 0.1) !important"
+    >
+      <div class="row">
+        <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+          <p class="m-0 text-white">
+            &copy; <a href="#"> 2024</a> All Rights Reserved. Designed by
+            <a href="https://sahaholdings.com/">Saha Learning Hub</a>
+          </p>
+        </div>
+        <div class="col-lg-6 text-center text-md-right">
+          <ul class="nav d-inline-flex">
+            <li class="nav-item">
+              <a class="nav-link text-white py-0" href="#">Privacy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white py-0" href="#">Terms</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white py-0" href="#">FAQs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white py-0" href="#">Help</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+      ><i class="fa fa-angle-double-up"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script>
+      document
+        .getElementById("navbar-toggler")
+        .addEventListener("click", function () {
+          const navbarCollapse = document.getElementById("navbar-collapse");
+          navbarCollapse.classList.toggle("show");
+        });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const currentPage = window.location.pathname.split("/").pop();
+
+        const navLinks = {
+          "index.html": "nav-home",
+          "about.html": "nav-about",
+          "course.html": "nav-subjects",
+          "secondary.html": "nav-subjects",
+          "teacher.html": "nav-teachers",
+          "blog.html": "nav-news",
+          "contact.html": "nav-contact",
+          "profile.html": "nav-profile",
+        };
+
+        document.querySelectorAll(".custom-nav-link").forEach((link) => {
+          link.classList.remove("active");
+        });
+
+        if (navLinks[currentPage]) {
+          document
+            .getElementById(navLinks[currentPage])
+            .classList.add("active");
+        }
+
+        const user = localStorage.getItem("user");
+        const profileSection = document.getElementById("profile-section");
+        const authLinks = document.getElementById("auth-links");
+
+        if (user) {
+          profileSection.style.display = "block";
+          authLinks.style.display = "flex";
+        } else {
+          profileSection.style.display = "none";
+          authLinks.style.display = "flex";
+        }
+
+        document
+          .getElementById("logout-link")
+          .addEventListener("click", function () {
+            localStorage.removeItem("user");
+            window.location.href = "login.html";
+          });
+      });
+    </script>
+
+    <script>
+      const sectionSelect = document.getElementById("section");
+      const gradeSelect = document.getElementById("grade");
+      const subjectsContainer = document.getElementById("subjects");
+
+      sectionSelect.addEventListener("change", updateAcademicInfo);
+
+      function updateAcademicInfo() {
+        // Clear existing options and subjects
+        gradeSelect.innerHTML =
+          '<option value="" disabled selected>Select Grade</option>';
+        subjectsContainer.innerHTML = "";
+
+        const selectedSection = sectionSelect.value;
+
+        // Populate Grade options based on section
+        if (selectedSection === "primary") {
+          const primaryGrades = [
+            "Grade 1",
+            "Grade 2",
+            "Grade 3",
+            "Grade 4",
+            "Grade 5",
+          ];
+          primaryGrades.forEach((grade) => {
+            const option = document.createElement("option");
+            option.value = grade;
+            option.textContent = grade;
+            gradeSelect.appendChild(option);
+          });
+
+          // Populate Subjects for Primary Section with checkboxes
+          const primarySubjects = [
+            "Tamil",
+            "Mathematics",
+            "Islam",
+            "English",
+            "Environment",
+            "Second Language Sinhala",
+          ];
+          primarySubjects.forEach((subject) => {
+            const subjectDiv = document.createElement("div");
+            subjectDiv.classList.add("form-check");
+            subjectDiv.innerHTML = `
+                    <input class="form-check-input" type="checkbox" name="subjects" value="${subject}" id="subject-${subject}">
+                    <label class="form-check-label" for="subject-${subject}">
+                        ${subject}
+                    </label>
+                `;
+            subjectsContainer.appendChild(subjectDiv);
+          });
+        } else if (selectedSection === "secondary") {
+          const secondaryGrades = [
+            "Grade 6",
+            "Grade 7",
+            "Grade 8",
+            "Grade 9",
+            "Grade 10",
+            "Grade 11",
+          ];
+          secondaryGrades.forEach((grade) => {
+            const option = document.createElement("option");
+            option.value = grade;
+            option.textContent = grade;
+            gradeSelect.appendChild(option);
+          });
+
+          // Populate Subjects for Secondary Section with checkboxes
+          const secondarySubjects = [
+            "Tamil",
+            "Mathematics",
+            "Islam",
+            "English",
+            "History",
+            "Science",
+            "Geography",
+            "Second Language Sinhala",
+            "Civics",
+            "ICT",
+          ];
+          secondarySubjects.forEach((subject) => {
+            const subjectDiv = document.createElement("div");
+            subjectDiv.classList.add("form-check");
+            subjectDiv.innerHTML = `
+                    <input class="form-check-input" type="checkbox" name="subjects" value="${subject}" id="subject-${subject}">
+                    <label class="form-check-label" for="subject-${subject}">
+                        ${subject}
+                    </label>
+                `;
+            subjectsContainer.appendChild(subjectDiv);
+          });
+        }
+      }
+    </script>
+
+    <script>
+      function setValueOrDefault(id, value) {
+        const element = document.getElementById(id);
+        if (element) {
+          element.value = value || ""; // Set the value if the element exists
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", async () => {
+        try {
+          const response = await fetch("/api/profile", {
+            method: "GET",
+            credentials: "include",
+          });
+
+          if (!response.ok) {
+            throw new Error(
+              `Failed to fetch profile data: ${response.statusText}`
+            );
+          }
+
+          const userProfile = await response.json();
+          console.log("Fetched profile data:", userProfile);
+
+          // Populate form fields
+          setValueOrDefault("fullName", userProfile.fullName);
+          setValueOrDefault("initials", userProfile.initials);
+          setValueOrDefault("gender", userProfile.gender);
+          setValueOrDefault("guardianName", userProfile.guardianName);
+          setValueOrDefault("email", userProfile.email);
+          setValueOrDefault("mobileNumber", userProfile.mobileNumber);
+          setValueOrDefault("address", userProfile.address);
+          setValueOrDefault("district", userProfile.district);
+          setValueOrDefault("section", userProfile.section);
+          setValueOrDefault("grade", userProfile.grade);
+
+          // Display the profile picture if available
+          if (userProfile.profilePicture) {
+            const profilePicturePreview = document.createElement("img");
+            profilePicturePreview.src = `/${userProfile.profilePicture}`;
+            profilePicturePreview.alt = "Profile Picture";
+            profilePicturePreview.style.maxWidth = "100px";
+            profilePicturePreview.style.marginTop = "10px";
+            const profilePictureContainer =
+              document.getElementById("profilePicture").parentNode;
+            profilePictureContainer.appendChild(profilePicturePreview);
+          }
+        } catch (error) {
+          console.error("Error fetching profile data:", error);
+
+          const messageContainer = document.getElementById("messageContainer");
+          messageContainer.innerHTML = `
+      <div class="alert alert-danger">
+        Failed to load profile data. Please try again later.
+      </div>
+    `;
+        }
+      });
+
+      const profileUpdateForm = document.getElementById("profileUpdateForm");
+
+      profileUpdateForm.addEventListener("submit", async (event) => {
+        event.preventDefault(); // Prevent default form submission behavior
+
+        // Collect form data
+        const formData = new FormData(profileUpdateForm);
+
+        try {
+          const response = await fetch("/api/updateProfile", {
+            method: "PUT",
+            body: formData,
+            credentials: "include", // Ensure session cookies are sent
+          });
+
+          const result = await response.json();
+          if (response.ok) {
+            // Display success message
+            const messageContainer =
+              document.getElementById("messageContainer");
+            messageContainer.innerHTML = `
+        <div class="alert alert-success">
+          Profile updated successfully!
+        </div>
+      `;
+          } else {
+            throw new Error(result.message || "Failed to update profile.");
+          }
+        } catch (error) {
+          console.error("Error updating profile:", error);
+
+          // Display error message
+          const messageContainer = document.getElementById("messageContainer");
+          messageContainer.innerHTML = `
+      <div class="alert alert-danger">
+        ${error.message}
+      </div>
+    `;
+        }
+      });
+
+      // Helper functions for error handling and displaying messages
+      function showError(id, message) {
+        const field = document.getElementById(id);
+        const errorElement = document.getElementById(id + "Error");
+        errorElement.textContent = message;
+        field.classList.add("is-invalid");
+      }
+
+      function clearErrors() {
+        document.querySelectorAll(".error-message").forEach((el) => {
+          el.textContent = "";
+        });
+        document.querySelectorAll(".form-control").forEach((el) => {
+          el.classList.remove("is-invalid");
+        });
+      }
+
+      function displayMessage(message, type) {
+        const container = document.getElementById("messageContainer");
+        container.innerHTML = `<div class="alert alert-${type}" role="alert">${message}</div>`;
+      }
+    </script>
+  </body>
+</html>

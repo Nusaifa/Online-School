@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Profile Update</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    
+<!-- Profile Update Page -->
+    <div class="container py-5">
+      <div class="text-center mb-5">
+        <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px">
+          User Profile
+        </h5>
+        <h1>Update Your Profile</h1>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="profile-form-container">
+            <div class="contact-form bg-secondary rounded p-5">
+              <form id="profileUpdateForm">
+                <h5 class="text-primary mb-4">Personal Information</h5>
+
+                <!-- Personal Information Section -->
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <label for="fullName" class="form-label">Full Name</label>
+                    <input
+                      type="text"
+                      id="fullName"
+                      name="fullName"
+                      class="form-control"
+                      required
+                    />
+                    <span
+                      id="fullNameError"
+                      class="error-message text-danger"
+                    ></span>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <label for="initials" class="form-label"
+                      >Initials With Name</label
+                    >
+                    <input
+                      type="text"
+                      id="initials"
+                      name="initials"
+                      class="form-control"
+                      required
+                    />
+                    <span
+                      id="initialsError"
+                      class="error-message text-danger"
+                    ></span>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <label for="gender" class="form-label">Gender</label>
+                    <select
+                      id="gender"
+                      name="gender"
+                      class="form-control"
+                      required
+                    >
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                    </select>
+                    <span
+                      id="genderError"
+                      class="error-message text-danger"
+                    ></span>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <label for="profilePicture" class="form-label"
+                      >Profile Picture</label
+                    >
+                    <input
+                      type="file"
+                      id="profilePicture"
+                      name="profilePicture"
+                      class="form-control"
+                      accept="image/*"
+                    />
+                    <span
+                      id="profilePictureError"
+                      class="error-message text-danger"
+                    ></span>
+                  </div>
+                </div>
+
+                <!-- Contact Details Section -->
+                <h5 class="text-primary mt-4 mb-4">Contact Details</h5>
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="form-control"
+                      disabled
+                    />
+                    <span
+                      id="emailError"
+                      class="error-message text-danger"
+                    ></span>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <label for="mobileNumber" class="form-label"
+                      >Mobile Number</label
+                    >
+                    <input
+                      type="text"
+                      id="mobileNumber"
+                      name="mobileNumber"
+                      class="form-control"
+                      placeholder="+94XXXXXXXXX"
+                      required
+                    />
+                    <span
+                      id="mobileNumberError"
+                      class="error-message text-danger"
+                    ></span>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <label for="address" class="form-label">Address</label>
+                    <input
+                      type="text"
+                      id="address"
+                      name="address"
+                      class="form-control"
+                      required
+                    />
+                    <span
+                      id="addressError"
+                      class="error-message text-danger"
+                    ></span>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <label for="district" class="form-label">District</label>
+                    <input
+                      type="text"
+                      id="district"
+                      name="district"
+                      class="form-control"
+                      required
+                    />
+                    <span
+                      id="districtError"
+                      class="error-message text-danger"
+                    ></span>
+                  </div>
+                </div>
+
+                <!-- Academic Information Section -->
+                <h5 class="text-primary mt-4 mb-4">Academic Information</h5>
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <label for="section" class="form-label">Section</label>
+                    <select
+                      id="section"
+                      name="section"
+                      class="form-control"
+                      required
+                    >
+                      <option value="" disabled selected>Select Section</option>
+                      <option value="primary">Primary Section</option>
+                      <option value="secondary">Secondary Section</option>
+                    </select>
+                    <span
+                      id="sectionError"
+                      class="error-message text-danger"
+                    ></span>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <label for="grade" class="form-label">Grade</label>
+                    <select
+                      id="grade"
+                      name="grade"
+                      class="form-control"
+                      required
+                    >
+                      <option value="" disabled selected>Select Grade</option>
+                    </select>
+                    <span
+                      id="gradeError"
+                      class="error-message text-danger"
+                    ></span>
+                  </div>
+                </div>
+
+                <!-- Subject Selection Container -->
+                <div id="subjects" class="mt-4"></div>
+
+                <button type="submit" class="btn btn-primary btn-block mt-4">
+                  Update Profile
+                </button>
+              </form>
+              <!-- Message Container for Error/Success -->
+              <div id="messageContainer" class="message-container mt-3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Profile Page End -->
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script>
+      document
+        .getElementById("navbar-toggler")
+        .addEventListener("click", function () {
+          const navbarCollapse = document.getElementById("navbar-collapse");
+          navbarCollapse.classList.toggle("show");
+        });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const currentPage = window.location.pathname.split("/").pop();
+
+        const navLinks = {
+          "index.html": "nav-home",
+          "about.html": "nav-about",
+          "course.html": "nav-subjects",
+          "secondary.html": "nav-subjects",
+          "teacher.html": "nav-teachers",
+          "blog.html": "nav-news",
+          "contact.html": "nav-contact",
+          "profile.html": "nav-profile",
+        };
+
+        document.querySelectorAll(".custom-nav-link").forEach((link) => {
+          link.classList.remove("active");
+        });
+
+        if (navLinks[currentPage]) {
+          document
+            .getElementById(navLinks[currentPage])
+            .classList.add("active");
+        }
+
+        const user = localStorage.getItem("user");
+        const profileSection = document.getElementById("profile-section");
+        const authLinks = document.getElementById("auth-links");
+
+        if (user) {
+          profileSection.style.display = "block";
+          authLinks.style.display = "flex";
+        } else {
+          profileSection.style.display = "none";
+          authLinks.style.display = "flex";
+        }
+
+        document
+          .getElementById("logout-link")
+          .addEventListener("click", function () {
+            localStorage.removeItem("user");
+            window.location.href = "login.html";
+          });
+      });
+    </script>
+
+<script>
+  const sectionSelect = document.getElementById("section");
+  const gradeSelect = document.getElementById("grade");
+  const subjectsContainer = document.getElementById("subjects");
+
+  sectionSelect.addEventListener("change", updateAcademicInfo);
+
+  function updateAcademicInfo() {
+    // Clear existing options and subjects
+    gradeSelect.innerHTML =
+      '<option value="" disabled selected>Select Grade</option>';
+    subjectsContainer.innerHTML = "";
+
+    const selectedSection = sectionSelect.value;
+
+    // Populate Grade options based on section
+    if (selectedSection === "primary") {
+      const primaryGrades = [
+        "Grade 1",
+        "Grade 2",
+        "Grade 3",
+        "Grade 4",
+        "Grade 5",
+      ];
+      primaryGrades.forEach((grade) => {
+        const option = document.createElement("option");
+        option.value = grade;
+        option.textContent = grade;
+        gradeSelect.appendChild(option);
+      });
+
+      // Populate Subjects for Primary Section with checkboxes
+      const primarySubjects = [
+        "Tamil",
+        "Mathematics",
+        "Islam",
+        "English",
+        "Environment",
+        "Second Language Sinhala",
+      ];
+      primarySubjects.forEach((subject) => {
+        const subjectDiv = document.createElement("div");
+        subjectDiv.classList.add("form-check");
+        subjectDiv.innerHTML = `
+                    <input class="form-check-input" type="checkbox" name="subjects" value="${subject}" id="subject-${subject}">
+                    <label class="form-check-label" for="subject-${subject}">
+                        ${subject}
+                    </label>
+                `;
+        subjectsContainer.appendChild(subjectDiv);
+      });
+    } else if (selectedSection === "secondary") {
+      const secondaryGrades = [
+        "Grade 6",
+        "Grade 7",
+        "Grade 8",
+        "Grade 9",
+        "Grade 10",
+        "Grade 11",
+      ];
+      secondaryGrades.forEach((grade) => {
+        const option = document.createElement("option");
+        option.value = grade;
+        option.textContent = grade;
+        gradeSelect.appendChild(option);
+      });
+
+      // Populate Subjects for Secondary Section with checkboxes
+      const secondarySubjects = [
+        "Tamil",
+        "Mathematics",
+        "Islam",
+        "English",
+        "History",
+        "Science",
+        "Geography",
+        "Second Language Sinhala",
+        "Civics",
+        "ICT",
+      ];
+      secondarySubjects.forEach((subject) => {
+        const subjectDiv = document.createElement("div");
+        subjectDiv.classList.add("form-check");
+        subjectDiv.innerHTML = `
+                    <input class="form-check-input" type="checkbox" name="subjects" value="${subject}" id="subject-${subject}">
+                    <label class="form-check-label" for="subject-${subject}">
+                        ${subject}
+                    </label>
+                `;
+        subjectsContainer.appendChild(subjectDiv);
+      });
+    }
+  }
+</script>
+
+    <!-- JavaScript -->
+    <script>
+      // Handle form submission
+      const profileUpdateForm = document.getElementById("profileUpdateForm");
+      profileUpdateForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        clearErrors();
+
+        let valid = true;
+        const fullName = document.getElementById("fullName").value;
+        const initials = document.getElementById("initials").value;
+        const mobileNumber = document.getElementById("mobileNumber").value;
+        const address = document.getElementById("address").value;
+        const district = document.getElementById("district").value;
+
+        if (!fullName) {
+          showError("fullName", "Full Name is required.");
+          valid = false;
+        }
+        if (!initials) {
+          showError("initials", "Initials are required.");
+          valid = false;
+        }
+        if (!/^\+?\d{10,15}$/.test(mobileNumber)) {
+          showError("mobileNumber", "Valid mobile number is required.");
+          valid = false;
+        }
+        if (!address) {
+          showError("address", "Address is required.");
+          valid = false;
+        }
+        if (!district) {
+          showError("district", "District is required.");
+          valid = false;
+        }
+
+        if (valid) {
+          const formData = new FormData(profileUpdateForm);
+          try {
+            const response = await fetch("/updateProfile", {
+              method: "PUT",
+              body: formData,
+            });
+            const result = await response.json();
+            if (response.ok) {
+              displayMessage("Profile updated successfully!", "success");
+            } else {
+              displayMessage(result.message || "Update failed.", "danger");
+            }
+          } catch (error) {
+            displayMessage("An unexpected error occurred.", "danger");
+          }
+        }
+      });
+
+      function showError(id, message) {
+        const field = document.getElementById(id);
+        const errorElement = document.getElementById(id + "Error");
+        errorElement.textContent = message;
+        field.classList.add("is-invalid");
+      }
+
+      function clearErrors() {
+        document.querySelectorAll(".error-message").forEach((el) => {
+          el.textContent = "";
+        });
+        document.querySelectorAll(".form-control").forEach((el) => {
+          el.classList.remove("is-invalid");
+        });
+      }
+
+      function displayMessage(message, type) {
+        const container = document.getElementById("messageContainer");
+        container.innerHTML = `<div class="alert alert-${type}" role="alert">${message}</div>`;
+      }
+    </script>
+  </body>
+</html>

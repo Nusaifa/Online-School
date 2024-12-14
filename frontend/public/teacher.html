@@ -68,95 +68,81 @@
 <body>
 
 <!-- Topbar start -->
-<div style="background: linear-gradient(to right, #fdf7f1, #fcefe3); padding: 15px 20px; border-bottom: 2px solid #800000; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);">
+<div class="topbar">
     <div class="container-fluid">
         <div class="row align-items-center">
             <!-- Logo Section -->
-            <div class="col-lg-auto text-center" style="padding-right: 15px;">
-                <img src="https://i.ibb.co/tzFNH9d/logo.png" alt="Saha Logo"
-                    style="width: 140px; height: 140px; box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);">
+            <div class="col-lg-auto logo-section">
+                <img src="https://i.ibb.co/tzFNH9d/logo.png" alt="Saha Logo" class="logo-img">
             </div>
 
             <!-- Company Name and Tagline -->
-            <div class="col text-left">
-                <h1 style="color: #800000; font-size: 46px; font-weight: 800; font-family: 'Montserrat', sans-serif; margin: 0; text-transform: uppercase; letter-spacing: 1.5px; text-shadow: 1px 2px 4px rgba(128, 0, 0, 0.3);">
-                    SAHA LEARNING HUB
-                </h1>
-                <p style="color: #800000; font-size: 18px; font-style: italic; font-family: 'Poppins', sans-serif; margin: 8px 0 0 2px; letter-spacing: 0.6px; text-shadow: 1px 1px 2px rgba(128, 0, 0, 0.15);">
-                    Empowering Futures Anytime, Anywhere
-                </p>
+            <div class="col company-info">
+                <h1 class="company-name">SAHA LEARNING HUB</h1>
+                <p class="tagline">கற்றல் இணையத்தில், வெற்றி வாழ்க்கையில்.</p>
             </div>
 
             <!-- Contact Information -->
-            <div class="col-lg-3 text-right">
-                <div style="margin-bottom: 8px; font-size: 15px; font-family: 'Poppins', sans-serif; font-weight: 500; color: #800000;">
-                    <i class="fa fa-envelope" style="font-size: 18px; color: #800000; margin-right: 8px;"></i>
+            <div class="col-lg-3 contact-info">
+                <div class="email">
+                    <i class="fa fa-envelope"></i>
                     info@sahaholdings.com
                 </div>
-                <div style="font-size: 15px; font-family: 'Poppins', sans-serif; font-weight: 500; color: #800000;">
-                    <i class="fa fa-phone" style="font-size: 18px; color: #800000; margin-right: 8px;"></i>
+                <div class="phone">
+                    <i class="fa fa-phone"></i>
                     +94 77 476 0699
                 </div>
             </div>
         </div>
     </div>
-</div>   
-<!-- Topbar end --> 
-     
-<!-- Navbar start -->
-<div class="container-fluid">
-    <div class="row border-top px-xl-5">
-        <div class="col-12">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light px-0 py-3">
-                <!-- Logo Section (left side) -->
-                <a href="#" class="navbar-brand d-block d-lg-none">
-                    <h1 class="m-0" style="color: #800000;">SAHA Learning Hub</h1>
-                </a>
-
-                <!-- Toggler button for mobile view -->
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Navbar items -->
-                <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a href="index.html" class="nav-link active">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="about.html" class="nav-link">About</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Subjects</a>
-                            <div class="dropdown-menu">
-                                <a href="course.html" class="dropdown-item">Primary Section ( 1 - 5)</a>
-                                <a href="secondary.html" class="dropdown-item">Secondary Section ( 6 - 11)</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a href="teacher.html" class="nav-link">Teachers</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a href="blog.html" class="nav-link">News</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="contact.html" class="nav-link">Contact</a>
-                        </li>
-                    </ul>
-
-                    <!-- Sign Up and Login buttons (right side) -->
-                    <div class="ml-auto d-none d-lg-flex">
-                        <a href="register.html" class="btn btn-primary py-2 px-4 mr-2">Sign Up</a>
-                        <a href="login.html" class="btn btn-secondary py-2 px-4">Login</a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </div>
 </div>
-<!-- Navbar End -->
-
+<!-- Topbar end -->
+     
+<!-- Navbar Start -->
+<div class="custom-navbar-container">
+    <nav class="custom-navbar">
+      <button class="custom-navbar-toggler" id="navbar-toggler">☰</button>
+      <div class="custom-navbar-collapse" id="navbar-collapse">
+        <ul class="custom-navbar-menu">
+          <li class="custom-nav-item">
+            <a href="index.html" class="custom-nav-link" id="nav-home">Home</a>
+          </li>
+          <li class="custom-nav-item">
+            <a href="about.html" class="custom-nav-link" id="nav-about">About</a>
+          </li>
+          <li class="custom-nav-item dropdown">
+            <a href="#" class="custom-nav-link dropdown-toggle" id="nav-subjects">Subjects</a>
+            <ul class="dropdown-menu">
+              <li><a href="course.html" class="dropdown-item">Primary Section</a></li>
+              <li><a href="secondary.html" class="dropdown-item">Secondary Section</a></li>
+            </ul>
+          </li>
+          <li class="custom-nav-item">
+            <a href="teacher.html" class="custom-nav-link" id="nav-teachers">Teachers</a>
+          </li>
+          <li class="custom-nav-item">
+            <a href="blog.html" class="custom-nav-link" id="nav-news">News</a>
+          </li>
+          <li class="custom-nav-item">
+            <a href="contact.html" class="custom-nav-link" id="nav-contact">Contact Us</a>
+          </li>
+          <li class="custom-nav-item dropdown" id="profile-section" style="display: none">
+            <a href="#" class="custom-nav-link dropdown-toggle" id="nav-profile">Profile</a>
+            <ul class="dropdown-menu">
+              <li><a href="profile.html" class="dropdown-item">User Profile</a></li>
+              <li><a href="password.html" class="dropdown-item">Password Change</a></li>
+              <li><a href="#" id="logout-link" class="dropdown-item">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="custom-auth-links" id="auth-links">
+          <a href="register.html" class="custom-btn primary-btn">Sign Up</a>
+          <a href="login.html" class="custom-btn secondary-btn">Login</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- Navbar End -->  
 <!-- Carousel Start -->
 <div class="container-fluid p-0 pb-5 mb-5">
     <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
@@ -193,7 +179,7 @@
     <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
         <div class="teacher-card shadow-sm w-100">
             <div class="teacher-photo-wrapper">
-                <img src="img/teacher_2.png" alt="MM. Mumthaj" class="teacher-photo img-fluid rounded-circle">
+                <img src="img/girl1.jpg" alt="MM. Mumthaj" class="teacher-photo img-fluid rounded-circle">
             </div>
             <div class="teacher-info text-center mt-4">
                 <h3 class="teacher-name text-primary">M.M. Mumthaj</h3>
@@ -208,7 +194,7 @@
     <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
         <div class="teacher-card shadow-sm w-100">
             <div class="teacher-photo-wrapper">
-                <img src="img/teacher_2.png" alt="MIF. Shabna" class="teacher-photo img-fluid rounded-circle">
+                <img src="img/girl2.jpg" alt="MIF. Shabna" class="teacher-photo img-fluid rounded-circle">
             </div>
             <div class="teacher-info text-center mt-4">
                 <h3 class="teacher-name text-primary">M.I.F. Shabna</h3>
@@ -223,7 +209,7 @@
     <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
         <div class="teacher-card shadow-sm w-100">
             <div class="teacher-photo-wrapper">
-                <img src="img/teacher_2.png" alt="Sajee Rose" class="teacher-photo img-fluid rounded-circle">
+                <img src="img/girl3.jpg" alt="Sajee Rose" class="teacher-photo img-fluid rounded-circle">
             </div>
             <div class="teacher-info text-center mt-4">
                 <h3 class="teacher-name text-primary">Sajee Rose</h3>
@@ -238,7 +224,7 @@
     <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
         <div class="teacher-card shadow-sm w-100">
             <div class="teacher-photo-wrapper">
-                <img src="img/teacher_2.png" alt="MIF. Hafsha" class="teacher-photo img-fluid rounded-circle">
+                <img src="img/girl4.jpg" alt="MIF. Hafsha" class="teacher-photo img-fluid rounded-circle">
             </div>
             <div class="teacher-info text-center mt-4">
                 <h3 class="teacher-name text-primary">M.I.F. Hafsha</h3>
@@ -259,7 +245,7 @@
     <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
         <div class="teacher-card shadow-sm w-100">
             <div class="teacher-photo-wrapper">
-                <img src="img/teacher_2.png" alt="MN. Naslun Fathima" class="teacher-photo img-fluid rounded-circle">
+                <img src="img/girl5.jpg" alt="MN. Naslun Fathima" class="teacher-photo img-fluid rounded-circle">
             </div>
             <div class="teacher-info text-center mt-4">
                 <h3 class="teacher-name text-primary">M.N. Naslun Fathima</h3>
@@ -274,7 +260,7 @@
     <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
         <div class="teacher-card shadow-sm w-100">
             <div class="teacher-photo-wrapper">
-                <img src="img/teacher_2.png" alt="MRC. Rizma" class="teacher-photo img-fluid rounded-circle">
+                <img src="img/girl6.jpg" alt="MRC. Rizma" class="teacher-photo img-fluid rounded-circle">
             </div>
             <div class="teacher-info text-center mt-4">
                 <h3 class="teacher-name text-primary">M.R.C. Rizma</h3>
@@ -289,7 +275,7 @@
     <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
         <div class="teacher-card shadow-sm w-100">
             <div class="teacher-photo-wrapper">
-                <img src="img/teacher_2.png" alt="M.H.F. Rinosa" class="teacher-photo img-fluid rounded-circle">
+                <img src="img/girl7.jpg" alt="M.H.F. Rinosa" class="teacher-photo img-fluid rounded-circle">
             </div>
             <div class="teacher-info text-center mt-4">
                 <h3 class="teacher-name text-primary">M.H.F. Rinosa</h3>
@@ -304,7 +290,7 @@
     <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
         <div class="teacher-card shadow-sm w-100">
             <div class="teacher-photo-wrapper">
-                <img src="img/teacher_2.png" alt="M. Rushana" class="teacher-photo img-fluid rounded-circle">
+                <img src="img/girl8.jpg" alt="M. Rushana" class="teacher-photo img-fluid rounded-circle">
             </div>
             <div class="teacher-info text-center mt-4">
                 <h3 class="teacher-name text-primary">M. Rushana</h3>
@@ -325,7 +311,7 @@
     <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
         <div class="teacher-card shadow-sm w-100">
             <div class="teacher-photo-wrapper">
-                <img src="img/teacher_2.png" alt="AS. Fathima" class="teacher-photo img-fluid rounded-circle">
+                <img src="img/girl9.jpg" alt="AS. Fathima" class="teacher-photo img-fluid rounded-circle">
             </div>
             <div class="teacher-info text-center mt-4">
                 <h3 class="teacher-name text-primary">A.S. Fathima</h3>
@@ -340,7 +326,7 @@
     <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
         <div class="teacher-card shadow-sm w-100">
             <div class="teacher-photo-wrapper">
-                <img src="img/teacher_2.png" alt="SFF. Sumaiya" class="teacher-photo img-fluid rounded-circle">
+                <img src="img/girl10.jpg" alt="SFF. Sumaiya" class="teacher-photo img-fluid rounded-circle">
             </div>
             <div class="teacher-info text-center mt-4">
                 <h3 class="teacher-name text-primary">S.F.F. Sumaiya</h3>
@@ -355,7 +341,7 @@
     <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
         <div class="teacher-card shadow-sm w-100">
             <div class="teacher-photo-wrapper">
-                <img src="img/teacher_2.png" alt="MSF. Safiya" class="teacher-photo img-fluid rounded-circle">
+                <img src="img/girl11.jpg" alt="MSF. Safiya" class="teacher-photo img-fluid rounded-circle">
             </div>
             <div class="teacher-info text-center mt-4">
                 <h3 class="teacher-name text-primary">M.S.F. Safiya</h3>
@@ -672,7 +658,7 @@
                         <a href="secondary.html" class="text-white mb-2"><i class="fa fa-angle-right mr-2"></i>Secondary Section (6-11)</a>
                         <a href="teacher.html" class="text-white mb-2"><i class="fa fa-angle-right mr-2"></i>Teachers</a>
                         <a href="blog.html" class="text-white mb-2"><i class="fa fa-angle-right mr-2"></i>Latest News</a>
-                        <a href="contact.html" class="text-white mb-2"><i class="fa fa-angle-right mr-2"></i>Contact</a>
+                        <a href="contact.html" class="text-white mb-2"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
                     </div>
                 </div>                    
             </div>
@@ -738,6 +724,53 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+        document.getElementById('navbar-toggler').addEventListener('click', function () {
+            const navbarCollapse = document.getElementById('navbar-collapse');
+            navbarCollapse.classList.toggle('show');
+        });
+    
+        document.addEventListener("DOMContentLoaded", function () {
+            const currentPage = window.location.pathname.split("/").pop();
+    
+            const navLinks = {
+                "index.html": "nav-home",
+                "about.html": "nav-about",
+                "course.html": "nav-subjects",
+                "secondary.html": "nav-subjects",
+                "teacher.html": "nav-teachers",
+                "blog.html": "nav-news",
+                "contact.html": "nav-contact",
+                "profile.html": "nav-profile",
+            };
+    
+            document.querySelectorAll('.custom-nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+    
+            if (navLinks[currentPage]) {
+                document.getElementById(navLinks[currentPage]).classList.add('active');
+            }
+    
+            const user = localStorage.getItem('user');
+            const profileSection = document.getElementById('profile-section');
+            const authLinks = document.getElementById('auth-links');
+    
+            if (user) {
+                profileSection.style.display = 'block';
+                authLinks.style.display = 'flex';
+            } else {
+                profileSection.style.display = 'none';
+                authLinks.style.display = 'flex';
+            }
+    
+            document.getElementById('logout-link').addEventListener('click', function () {
+                localStorage.removeItem('user');
+                window.location.href = 'login.html';
+            });
+        });
+    </script>
 </body>
 
 </html>
