@@ -207,7 +207,7 @@ router.put("/updateProfile", upload.single("profilePicture"), (req, res) => {
     return res.status(401).json({ message: "Unauthorized. Please log in." });
   }
 
-  // Extract the data from the request body
+  // Extract data from the request
   const fullName = req.body.fullName || null;
   const initials = req.body.initials || null;
   const gender = req.body.gender || null;
@@ -216,38 +216,50 @@ router.put("/updateProfile", upload.single("profilePicture"), (req, res) => {
   const district = req.body.district || null;
   const section = req.body.section || null;
   const grade = req.body.grade || null;
-  const profilePicture = req.file ? req.file.path : null;
+  const profilePicture = req.file ? req.file.path.replace(/\\/g, "/") : null;
 
-  // Update query
+  // Construct the update query
   const query = `
       UPDATE users
-      SET fullName = ?, initials = ?, gender = ?, mobileNumber = ?, address = ?, district = ?, section = ?, grade = ?, profilePicture = ?
+      SET
+        fullName = ?,
+        initials = ?,
+        gender = ?,
+        mobileNumber = ?,
+        address = ?,
+        district = ?,
+        section = ?,
+        grade = ?
+        ${profilePicture ? ", profilePicture = ?" : ""}
       WHERE id = ?
     `;
 
-  db.query(
-    query,
-    [
-      fullName,
-      initials,
-      gender,
-      mobileNumber,
-      address,
-      district,
-      section,
-      grade,
-      profilePicture,
-      req.session.userId,
-    ],
-    (err, result) => {
-      if (err) {
-        console.error("Error updating profile:", err);
-        return res.status(500).json({ message: "Error updating profile." });
-      }
-      res.json({ message: "Profile updated successfully." });
+  const queryParams = [
+    fullName,
+    initials,
+    gender,
+    mobileNumber,
+    address,
+    district,
+    section,
+    grade,
+  ];
+
+  if (profilePicture) {
+    queryParams.push(profilePicture);
+  }
+  queryParams.push(req.session.userId);
+
+  // Execute the query
+  db.query(query, queryParams, (err, result) => {
+    if (err) {
+      console.error("Error updating profile:", err);
+      return res.status(500).json({ message: "Error updating profile." });
     }
-  );
+    res.json({ message: "Profile updated successfully." });
+  });
 });
+
 
 // Change Password Route
 router.put("/changePassword", isAuthenticated, async (req, res) => {

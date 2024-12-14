@@ -249,7 +249,6 @@
                       class="form-control"
                     />
                   </div>
-
                   <div class="col-md-6 form-group">
                     <label for="profilePicture" class="form-label"
                       >Profile Picture</label
@@ -261,10 +260,18 @@
                       class="form-control"
                       accept="image/*"
                     />
-                    <span
-                      id="profilePictureError"
-                      class="error-message text-danger"
-                    ></span>
+                    <small
+                      id="profilePictureFileName"
+                      class="text-muted mt-1 d-block"
+                    >
+                      No file chosen
+                    </small>
+                    <img
+                      id="profilePicturePreview"
+                      src=""
+                      alt="Profile Picture"
+                      style="max-width: 100px; margin-top: 10px; display: block"
+                    />
                   </div>
                 </div>
 
@@ -712,7 +719,23 @@
       }
 
       document.addEventListener("DOMContentLoaded", async () => {
+        function setValueOrDefault(id, value) {
+          const element = document.getElementById(id);
+          if (element) {
+            element.value = value || ""; // Set the value if the element exists
+          }
+        }
+
+        const profilePictureInput = document.getElementById("profilePicture");
+        const profilePicturePreview = document.getElementById(
+          "profilePicturePreview"
+        );
+        const profilePictureFileName = document.getElementById(
+          "profilePictureFileName"
+        );
+
         try {
+          // Fetch user profile data
           const response = await fetch("/api/profile", {
             method: "GET",
             credentials: "include",
@@ -740,15 +763,11 @@
           setValueOrDefault("grade", userProfile.grade);
 
           // Display the profile picture if available
-          if (userProfile.profilePicture) {
-            const profilePicturePreview = document.createElement("img");
+          if (userProfile.profilePicture && profilePicturePreview) {
             profilePicturePreview.src = `/${userProfile.profilePicture}`;
-            profilePicturePreview.alt = "Profile Picture";
-            profilePicturePreview.style.maxWidth = "100px";
-            profilePicturePreview.style.marginTop = "10px";
-            const profilePictureContainer =
-              document.getElementById("profilePicture").parentNode;
-            profilePictureContainer.appendChild(profilePicturePreview);
+            profilePictureFileName.textContent = userProfile.profilePicture
+              .split("/")
+              .pop(); // Set the file name
           }
         } catch (error) {
           console.error("Error fetching profile data:", error);
@@ -760,6 +779,28 @@
       </div>
     `;
         }
+
+        // Handle profile picture selection and update the preview
+        profilePictureInput.addEventListener("change", (event) => {
+          const file = event.target.files[0];
+          if (file && file.type.startsWith("image/")) {
+            const reader = new FileReader();
+
+            reader.onload = (e) => {
+              // Update the existing image preview
+              profilePicturePreview.src = e.target.result;
+            };
+
+            reader.readAsDataURL(file);
+
+            // Display the selected file name
+            profilePictureFileName.textContent = file.name;
+          } else {
+            // Reset preview and file name if no valid file is selected
+            profilePicturePreview.src = "";
+            profilePictureFileName.textContent = "No file chosen";
+          }
+        });
       });
 
       const profileUpdateForm = document.getElementById("profileUpdateForm");
@@ -779,14 +820,23 @@
 
           const result = await response.json();
           if (response.ok) {
-            // Display success message
+            // Display success message with Continue button
             const messageContainer =
               document.getElementById("messageContainer");
             messageContainer.innerHTML = `
         <div class="alert alert-success">
           Profile updated successfully!
         </div>
+        <button id="continueButton" class="btn btn-primary mt-3">
+          Continue
+        </button>
       `;
+
+            // Add event listener to the Continue button
+            const continueButton = document.getElementById("continueButton");
+            continueButton.addEventListener("click", () => {
+              window.location.href = "login.html";
+            });
           } else {
             throw new Error(result.message || "Failed to update profile.");
           }
